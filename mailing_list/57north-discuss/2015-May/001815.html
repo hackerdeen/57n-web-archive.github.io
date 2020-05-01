@@ -1,0 +1,518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-May/001815.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:51 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Robot arm handover notes
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Robot%20arm%20handover%20notes&In-Reply-To=%3CCAHS2HcHso%3DoBM1ZEzWYf6qbDS-H7_Ye6JdDTKn386i25S9hQMg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-May/001814.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-May/001820.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Robot arm handover notes</H1>
+    <B>Calum Chisholm</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Robot%20arm%20handover%20notes&In-Reply-To=%3CCAHS2HcHso%3DoBM1ZEzWYf6qbDS-H7_Ye6JdDTKn386i25S9hQMg%40mail.gmail.com%3E"
+       TITLE="[57north-discuss] Robot arm handover notes">calum.chisholm at gmail.com
+       </A><BR>
+    <I>Mon May 11 08:55:51 BST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-May/001814.html">[57north-discuss] Door locked
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-May/001820.html">[57north-discuss] Project Thursdays
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/date.html#1815">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/thread.html#1815">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/subject.html#1815">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/author.html#1815">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>[Plain text version attached in case this gets mangled by GMail]
+
+Hi All,
+It's long overdue, but I've finally got around to putting together some
+handover notes for the robot arm - hopefully they're of interest / help to
+someone. I still subscribe to the -discuss list, and I'm happy to answer
+any questions if I can. I'll also look at adding this to the wiki - I've
+got various bits of background material (manuals, photos etc.) which are
+probably also worth including as well. I can't guarantee that these notes
+are free from errors, but hopefully they're a good starting point.
+
+Ed has kindly agreed to act as the arm's 'adoptive father' in my absence,
+so it's probably best to check in with him before undertaking any hacking
+on it.
+
+Finally, if you manage to do anything interesting with the arm, please let
+me know - I'm curious to see just what it can do for someone who can devote
+a bit of time to it.
+
+Cheers,
+Calum
+
+------
+
+Background
+==========
+
+The arm is a Microbot Teachmover II (also known as the Microbot Alpha II,
+or &quot;your metal pal who's fun to be with&quot;), a product which dates from the
+mid-80's. This particular unit appears to be from no earlier than 1989
+based on IC date codes. The arm is marketed as a teaching tool, but is also
+suitable for light automation tasks. There's a nice video [0] dating from
+1983 which shows the earlier Mark I in action.
+
+The arm has 5 degrees of freedom (base, shoulder, elbow, left wrist and
+right wrist) - the 6th (gripper) is missing on this particular arm, but
+could probably be added without too much drama. The individual joints are
+driven by steppers using a system of gears and cables, rather than being
+driven directly. The manual states that the resolution of the arm can be as
+fine as 0.011&quot; with a speed of between 2&quot; and 7&quot; per second, depending upon
+load. The cables may need to be re-tensioned in order to get that level of
+accuracy though. Full specs can be found on the manufacturer website [1],
+where it's still sold for $5800.
+
+
+A typical setup would be:
+
+    [ Teach Pendant ] --&gt; [         ]
+                          [ System  ]
+        and/or            [ Control ] &lt;----&gt; [ Robot Arm ]
+                          [ Unit    ]
+    [ PC ] &lt;------------&gt; [         ]
+
+
+System Control
+==============
+
+In recent hardware revisions, the System Control unit appears to have been
+integrated into the base of the arm, however the version supplied is
+roughly the size of a desktop PC base-unit. It's a 6502-based machine with
+the following ports:
+
+ * 1x DB-50 for connect to the arm (see 'Interface' section below).
+ * 1x DB-25 serial port to connect to a PC. [2]
+ * 1x DB-25 serial port to connect to 'peripheral' (according to the PCB
+silkscreen). I suspect this is used for daisy-chaining multiple controllers
+or arms.
+ * 1x DB-15 port for 'Operator Control' (unknown).
+ * 2x 14-pin connectors (unfamiliar type) for driving auxiluary motors.
+ * 1x 24-pin connector (same unfamiliar type) for connecting to the Teach
+Pendant.
+
+The teach pendant is a handheld controller used to control the arm,
+optionally record sequences for later playback. It's unclear whether
+there's actually any intelligence in the pendant itself, or if it's simply
+a bunch of switches talking to the SCB. The pendant wasn't supplied with
+our arm, but it would be a nice little project to put one together.
+
+Also, there is space on the PCB for 18 opto-isolators (3 already
+populated), providing 10 inputs lines and 8 output lines for interfacing
+with other hardware.
+
+Given the size, age, lack of documentation, cabling and software, it's the
+System Control portion of the setup which I've been working on replacing. I
+may get around to documenting the original System Control hardware at some
+point and dumping the EPROMs, but that's a project for a later date.
+
+
+Arm Hardware
+============
+
+The steppers are driven by 7 pairs of 3717 controllers [3] located in the
+base of the arm, with each controller driving one winding of a stepper. The
+controllers (as numbered on the PCB) are paired as follows:
+
+Controller     Function
+----------      --------
+U1 &amp; U2         Elbow
+U3 &amp; U4         Shoulder
+U5 &amp; U6         Rt. Wrist
+U7 &amp; U8         [Unused]
+U9 &amp; U10        Base
+U11 &amp; U12       Gripper (not present)
+U13 &amp; U14       Lt. Wrist
+
+The steppers may be driven in either full-step, half-step or quarter-step
+modes, depending upon the stepping sequence used (see datasheet).
+
+The only other chips in the base are a pair of LM339 comparators [4]. I'm
+not sure what these are used for - possibly for use with motor limit
+sensors or grip sensors?
+
+
+Interface
+=========
+
+We communicate with the arm via a DB-50 (female) port on the base. Despite
+appearances, it's not a serial port, but simply a dumb pass-through to the
+3717 pins, as well as motor power and sensor outputs.
+
+The pinout (looking at the arm) is as follows:
+
+----------------------------------------------------------------
+\                                                              /
+ \     01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17     /
+  \                                                          /
+   \    18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33     /
+    \                                                      /
+     \ 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 /
+      \__________________________________________________/
+
+Probing the board with a multimeter, I've established that the pins are
+mapped as follows:
+
+Pin     Usage
+---     -----
+01      U14 Phase
+02      U13 Phase
+03      U5 I0
+04      U6 I0
+05      U12 Phase (Currently unused)
+06      U11 Phase (Currently unused)
+07      U3 I0
+08      U4 I0
+09      U10 Phase
+10      U9 Phase
+11      U1 I0
+12      U2 I0
+13-16   ????
+17      GND
+18      U14 I0
+19      U13 I0
+20      U5 Phase
+21      U6 Phase
+22      U12 I0 (Currently unused)
+23      U11 I0 (Currently unused)
+24      U3 Phase
+25      U4 Phase
+26      U10 I0
+27      U9 I0
+28      U1 Phase
+29      U2 Phase
+30-33   ????
+34      Grip sensor pin2
+35      Grip sensor pin4
+36      GND
+37      GND
+38      ????
+39      +12v at 4.5A (motor supply)
+40      +5v  (logic supply)
+41-50   ????
+
+
+4 of the remaining '????' pins probably map to the phase and I0 pins of U7
+and U8 (not currently unused). The other 15 pins are likely to be used
+either for returning sensor data to the controller (limit switches?) or are
+unused.
+
+The pneumatic connections on the base are not used as part of the arm's
+operation - they were presumably used to drive some form of actuator in
+place of the gripper.
+
+
+Replacement Controller
+======================
+
+Using the above mappings, I've created a sketch for the Arduino to drive
+the arm. It should serve as a decent starting point for your projects,
+though I realise it's missing a few 'nice to have' features. Given the
+number of pins required, it's pretty much limited to running on an Arduino
+Mega.
+
+You can find the code at github.com/calumchisholm/teachmoverduino
+
+Questions, pull requests and forks all welcome, though I can't guarantee
+I'll be doing much more development on it going forward.
+
+There are a couple of outstanding 'TODOs' on my list which might be a nice
+starting point for someone digging into the code:
+
+ * Clean up the Serial.Print debug code - these calls have a significant
+performance impact when made during a motor movement and should be made
+only when strictly necessary.
+ * Implement separate timers for each motor, allowing them to run
+simultaneously at different speeds.
+ * Implement some other input sources e.g. serial, network, SPI, Ed's
+mind-control helmet... [5]
+
+
+Markings
+========
+
+Arm Serial# plate:
+    MICROBOT Alpha
+    SERIAL NO. 1564
+
+Arm base PCB:
+    MICROBOT INC
+    ALPHA MOTOR DRIVE
+    ASSY: 10131
+    REV. A
+    Serial No. 636
+
+System Control unit PCB:
+    MICROBOT
+    PROCESSOR
+    ASSY 10060
+    REV 1985
+    Serial No C0190002
+    1564 [6]
+
+
+Footnotes
+=========
+
+[0] <A HREF="https://www.youtube.com/watch?v=szDbJdPCEzQ">https://www.youtube.com/watch?v=szDbJdPCEzQ</A>
+
+[1]
+<A HREF="http://www.microbotzone.com/TeachMover/TeachMoverII/Specifications/tabid/3659/Default.aspx">http://www.microbotzone.com/TeachMover/TeachMoverII/Specifications/tabid/3659/Default.aspx</A>
+
+[2] The latest version of the software is named the 'Microbot Control
+Center', but manuals found online also show earlier DOS and Java versions
+which are fairly similar.
+<A HREF="http://www.microbotzone.com/LinkClick.aspx?fileticket=0BxEdwQrvlI%3d&amp;tabid=3668">http://www.microbotzone.com/LinkClick.aspx?fileticket=0BxEdwQrvlI%3d&amp;tabid=3668</A>
+
+[3]
+<A HREF="http://www.digchip.com/datasheets/download_datasheet.php?id=745002&amp;part-number=PBL3717-2N">http://www.digchip.com/datasheets/download_datasheet.php?id=745002&amp;part-number=PBL3717-2N</A>
+
+[4] <A HREF="http://www.ti.com/lit/ds/symlink/lm339-n.pdf">http://www.ti.com/lit/ds/symlink/lm339-n.pdf</A>
+
+[5] The Pixy camera would also be a nice input source:
+<A HREF="http://charmedlabs.com/default/pixy-cmucam5/">http://charmedlabs.com/default/pixy-cmucam5/</A>
+<A HREF="https://www.youtube.com/watch?v=NxlqawCnX3s">https://www.youtube.com/watch?v=NxlqawCnX3s</A>
+
+[6] Note that this matches the number marked on the arm itself - the base
+and the arm were definitely supplied together.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20150511/c8f9a5e0/attachment-0001.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20150511/c8f9a5e0/attachment-0001.html</A>&gt;
+-------------- next part --------------
+Hi All,
+It's long overdue, but I've finally got around to putting together some handover notes for the robot arm - hopefully they're of interest / help to someone. I still subscribe to the -discuss list, and I'm happy to answer any questions if I can. I'll also look at adding this to the wiki - I've got various bits of background material (manuals, photos etc.) which are probably also worth including as well. I can't guarantee that these notes are free from errors, but hopefully they're a good starting point.
+
+Ed has kindly agreed to act as the arm's 'adoptive father' in my absence, so it's probably best to check in with him before undertaking any hacking on it.
+
+Finally, please let me know if you manage to do anything interesting with the arm - I'm curious to see just what it can do for someone who can devote a bit of time to it.
+
+Cheers,
+Calum
+
+
+Background
+==========
+
+The arm is a Microbot Teachmover II (also known as the Microbot Alpha II, or &quot;your metal pal who's fun to be with&quot;), a product which dates from the mid-80's. This particular unit appears to be from no earlier than 1989 based on IC date codes. The arm is marketed as a teaching tool, but is also suitable for light automation tasks. There's a nice video [0] dating from 1983 which shows the earlier Mark I in action.
+
+The arm has 5 degrees of freedom (base, shoulder, elbow, left wrist and right wrist) - the 6th (gripper) is missing on this particular arm, but could probably be added without too much drama. The individual joints are driven by steppers using a system of gears and cables, rather than being driven directly. The manual states that the resolution of the arm can be as fine as 0.011&quot; with a speed of between 2&quot; and 7&quot; per second, depending upon load. The cables may need to be re-tensioned in order to get that level of accuracy though. Full specs can be found on the manufacturer website [1], where it's still sold for $5800.
+
+
+A typical setup would be:
+
+    [ Teach Pendant ] --&gt; [         ]
+                          [ System  ]
+        and/or            [ Control ] &lt;----&gt; [ Robot Arm ]
+                          [ Unit    ]
+    [ PC ] &lt;------------&gt; [         ]
+
+
+System Control
+==============
+
+In recent hardware revisions, the System Control unit appears to have been integrated into the base of the arm, however the version supplied is roughly the size of a desktop PC base-unit. It's a 6502-based machine with the following ports:
+
+ * 1x DB-50 for connect to the arm (see 'Interface' section below).
+ * 1x DB-25 serial port to connect to a PC. [2]
+ * 1x DB-25 serial port to connect to 'peripheral' (according to the PCB silkscreen). I suspect this is used for daisy-chaining multiple controllers or arms.
+ * 1x DB-15 port for 'Operator Control' (unknown).
+ * 2x 14-pin connectors (unfamiliar type) for driving auxiluary motors.
+ * 1x 24-pin connector (same unfamiliar type) for connecting to the Teach Pendant.
+
+The teach pendant is a handheld controller used to control the arm, optionally record sequences for later playback. It's unclear whether there's actually any intelligence in the pendant itself, or if it's simply a bunch of switches talking to the SCB. The pendant wasn't supplied with our arm, but it would be a nice little project to put one together.
+
+Also, there is space on the PCB for 18 opto-isolators (3 already populated), providing 10 inputs lines and 8 output lines for interfacing with other hardware.
+
+Given the size, age, lack of documentation, cabling and software, it's the System Control portion of the setup which I've been working on replacing. I may get around to documenting the original System Control hardware at some point and dumping the EPROMs, but that's a project for a later date.
+
+
+Arm Hardware
+============
+
+The steppers are driven by 7 pairs of 3717 controllers [3] located in the base of the arm, with each controller driving one winding of a stepper. The controllers (as numbered on the PCB) are paired as follows:
+
+Controller 	Function
+----------      --------
+U1 &amp; U2         Elbow
+U3 &amp; U4         Shoulder
+U5 &amp; U6         Rt. Wrist
+U7 &amp; U8         [Unused]
+U9 &amp; U10        Base
+U11 &amp; U12       Gripper (not present)
+U13 &amp; U14       Lt. Wrist
+
+The steppers may be driven in either full-step, half-step or quarter-step modes, depending upon the stepping sequence used (see datasheet).
+
+The only other chips in the base are a pair of LM339 comparators [4]. I'm not sure what these are used for - possibly for use with motor limit sensors or grip sensors? 
+
+
+Interface
+=========
+
+We communicate with the arm via a DB-50 (female) port on the base. Despite appearances, it's not a serial port, but simply a dumb pass-through to the 3717 pins, as well as motor power and sensor outputs.
+
+The pinout (looking at the arm) is as follows:
+
+----------------------------------------------------------------
+\                                                              /
+ \     01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17     /
+  \                                                          /
+   \    18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33     /
+    \                                                      /
+     \ 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 /
+      \__________________________________________________/
+
+Probing the board with a multimeter, I've established that the pins are mapped as follows:
+
+Pin     Usage
+---     -----
+01      U14 Phase
+02 	U13 Phase
+03 	U5 I0
+04 	U6 I0
+05 	U12 Phase (Currently unused)
+06 	U11 Phase (Currently unused)
+07 	U3 I0
+08 	U4 I0
+09 	U10 Phase
+10 	U9 Phase
+11 	U1 I0
+12 	U2 I0
+13-16	????
+17 	GND
+18 	U14 I0
+19 	U13 I0
+20 	U5 Phase
+21 	U6 Phase
+22 	U12 I0 (Currently unused)
+23 	U11 I0 (Currently unused)
+24 	U3 Phase
+25 	U4 Phase
+26 	U10 I0
+27 	U9 I0
+28 	U1 Phase
+29 	U2 Phase
+30-33	????
+34 	Grip sensor pin2
+35 	Grip sensor pin4
+36 	GND
+37 	GND
+38	????
+39 	+12v at 4.5A (motor supply)
+40 	+5v  (logic supply)
+41-50	????
+
+
+4 of the remaining '????' pins probably map to the phase and I0 pins of U7 and U8 (not currently unused). The other 15 pins are likely to be used either for returning sensor data to the controller (limit switches?) or are unused.
+
+The pneumatic connections on the base are not used as part of the arm's operation - they were presumably used to drive some form of actuator in place of the gripper.
+
+
+Replacement Controller
+======================
+
+Using the above mappings, I've created a sketch for the Arduino to drive the arm. It should serve as a decent starting point for your projects, though I realise it's missing a few 'nice to have' features. Given the number of pins required, it's pretty much limited to running on an Arduino Mega.
+
+You can find the code at github.com/calumchisholm/teachmoverduino
+
+Questions, pull requests and forks all welcome, though I can't guarantee I'll be doing much more development on it going forward.
+
+There are a couple of outstanding 'TODOs' on my list which might be a nice starting point for someone digging into the code:
+
+ * Clean up the Serial.Print debug code - these calls have a significant performance impact when made during a motor movement and should be made only when strictly necessary.
+ * Implement separate timers for each motor, allowing them to run simultaneously at different speeds.
+ * Implement some other input sources e.g. serial, network, SPI, Ed's mind-control helmet... [5]
+
+
+Markings
+========
+
+Arm Serial# plate:
+	MICROBOT Alpha
+	SERIAL NO. 1564
+
+Arm base PCB:
+	MICROBOT INC
+	ALPHA MOTOR DRIVE
+	ASSY: 10131
+	REV. A
+	Serial No. 636
+
+System Control unit PCB:
+	MICROBOT
+	PROCESSOR
+	ASSY 10060
+	REV 1985
+	Serial No C0190002
+	1564 [6]
+
+
+Footnotes
+=========
+
+[0] <A HREF="https://www.youtube.com/watch?v=szDbJdPCEzQ">https://www.youtube.com/watch?v=szDbJdPCEzQ</A>
+
+[1] <A HREF="http://www.microbotzone.com/TeachMover/TeachMoverII/Specifications/tabid/3659/Default.aspx">http://www.microbotzone.com/TeachMover/TeachMoverII/Specifications/tabid/3659/Default.aspx</A>
+
+[2] The latest version of the software is named the 'Microbot Control Center', but manuals found online also show earlier DOS and Java versions which are fairly similar.
+<A HREF="http://www.microbotzone.com/LinkClick.aspx?fileticket=0BxEdwQrvlI%3d&amp;tabid=3668">http://www.microbotzone.com/LinkClick.aspx?fileticket=0BxEdwQrvlI%3d&amp;tabid=3668</A>
+
+[3] <A HREF="http://www.digchip.com/datasheets/download_datasheet.php?id=745002&amp;part-number=PBL3717-2N">http://www.digchip.com/datasheets/download_datasheet.php?id=745002&amp;part-number=PBL3717-2N</A>
+
+[4] <A HREF="http://www.ti.com/lit/ds/symlink/lm339-n.pdf">http://www.ti.com/lit/ds/symlink/lm339-n.pdf</A>
+
+[5] The Pixy camera would also be a nice input source:
+<A HREF="http://charmedlabs.com/default/pixy-cmucam5/">http://charmedlabs.com/default/pixy-cmucam5/</A>
+<A HREF="https://www.youtube.com/watch?v=NxlqawCnX3s">https://www.youtube.com/watch?v=NxlqawCnX3s</A>
+
+[6] Note that this matches the number marked on the arm itself - the base and the arm were definitely supplied together.
+</PRE>
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-May/001814.html">[57north-discuss] Door locked
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-May/001820.html">[57north-discuss] Project Thursdays
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/date.html#1815">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/thread.html#1815">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/subject.html#1815">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-May/author.html#1815">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-May/001815.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:51 GMT -->
+</html>

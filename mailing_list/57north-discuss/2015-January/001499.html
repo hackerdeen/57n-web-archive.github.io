@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001499.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] TLS Certificates for official 57North services
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20TLS%20Certificates%20for%20official%2057North%20services&In-Reply-To=%3CCAO7s0DvTXMja7st%3DQSWiicq8Dd3ivuU%3DLfb6tPy4nVzYQH9seg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001498.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001502.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] TLS Certificates for official 57North services</H1>
+    <B>Andy Gaskell</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20TLS%20Certificates%20for%20official%2057North%20services&In-Reply-To=%3CCAO7s0DvTXMja7st%3DQSWiicq8Dd3ivuU%3DLfb6tPy4nVzYQH9seg%40mail.gmail.com%3E"
+       TITLE="[57north-discuss] TLS Certificates for official 57North services">ag at ssofb.co.uk
+       </A><BR>
+    <I>Wed Jan  7 21:28:03 UTC 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001498.html">[57north-discuss] TLS Certificates for official 57North services
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001502.html">[57north-discuss] [jones at sdf.org: Re: TLS Certificates for official 57North services]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1499">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1499">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1499">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1499">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hiya
+
+I think issue may just be solved by the new semantic wiki.  The new wiki
+looks great, and we'd discussed using this as our main website and CMS.  I
+think this will be good as it'll mean we don't have duplicated info and
+systems.  I'll happily white the MediaWiki skin, I can get stuck in and do
+that next couple of week.  We can kind of make it look 'cool', and still be
+a wiki I think.  Reason I mention that here is it perhaps solves this
+perceived issue, as the wiki is accessible via http and https.
+
+I would probably use MediaWiki Bootstrapskin (
+<A HREF="http://www.mediawikibootstrapskin.co.uk/index.php?title=Main_Page">http://www.mediawikibootstrapskin.co.uk/index.php?title=Main_Page</A> ) as a
+starting point, and do a bit of customising from there.
+
+Cheers
+
+Andy
+
+
+
+
+
+
+
+
+
+
+
+
+On 7 January 2015 at 20:53, Iain R. Learmonth &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">irl at fsfe.org</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> There was discussion last night regarding TLS certificates for 57North
+</I>&gt;<i> services. In this email I will outline the current situation for TLS
+</I>&gt;<i> certificates on our services, what I would like to see and also try to
+</I>&gt;<i> outline some of the other opinions from last night (but I won't name anyone
+</I>&gt;<i> in case I've misrepresented their view).
+</I>&gt;<i>
+</I>&gt;<i> On the 28th March 2014 we were issued, free of charge, a wildcard
+</I>&gt;<i> certificate for *.57north.co by GlobalSign as part of their free
+</I>&gt;<i> certificates for Open Source projects programme. This is currently in use
+</I>&gt;<i> for our website at <A HREF="https://57north.co/">https://57north.co/</A> although this certificate is not as
+</I>&gt;<i> trusted as we were led to believe. I have often heard people complaining
+</I>&gt;<i> that the certificate was not trusted, especially on Android devices.
+</I>&gt;<i>
+</I>&gt;<i> Wildcard certificates, especially now that we have multiple servers running
+</I>&gt;<i> our services, present security concerns in that any server would be able to
+</I>&gt;<i> pretend to be any other. GlobalSign are not willing to renew this
+</I>&gt;<i> certificate for free and it expires on the 29th March 2015.
+</I>&gt;<i>
+</I>&gt;<i> As a free alternative, for new services like the new wiki announced last
+</I>&gt;<i> night (expect an email about this shortly), I have been using CAcert
+</I>&gt;<i> certificates. CAcert.org is a community-driven Certificate Authority that
+</I>&gt;<i> issues certificates to the public at large for free.
+</I>&gt;<i>
+</I>&gt;<i> Given that our current certificate is not that trusted, I don't see this as
+</I>&gt;<i> introducing any new barriers to accessing our site. It was suggested that
+</I>&gt;<i> we
+</I>&gt;<i> have the wiki as not HTTPS-only and I have temporarily agreed to this, but
+</I>&gt;<i> it is important to remember that encryption is not only there to protect
+</I>&gt;<i> passwords. Encryption stops those who are spying on your connection from
+</I>&gt;<i> seeing what projects you are looking at, what themes you're reading about,
+</I>&gt;<i> etc. in the same way that when you go to a public library people can see
+</I>&gt;<i> you
+</I>&gt;<i> went to the library but not what books you have read. Reader privacy is
+</I>&gt;<i> important and as a hackerspace, I believe, this is something we should be
+</I>&gt;<i> promoting.
+</I>&gt;<i>
+</I>&gt;<i> Don't forget that if we have unencrypted services because we're afraid
+</I>&gt;<i> people may be put off by scary browser messages, the terrorists have won.
+</I>&gt;<i>
+</I>&gt;<i> It was also proposed that for our primary public facing presence that we
+</I>&gt;<i> used a paid certificate that was likely to be trusted in as many browsers
+</I>&gt;<i> as
+</I>&gt;<i> possible. I would object the hackerspace funding this browser-based
+</I>&gt;<i> terrorism where there are only a select few that get to choose who can be
+</I>&gt;<i> trusted on the Internet, and I would hope other members would object to
+</I>&gt;<i> their membership fees being spent in that way too.
+</I>&gt;<i>
+</I>&gt;<i> I am only proposing the use of CAcert certificates until EFF's Let's
+</I>&gt;<i> Encrypt
+</I>&gt;<i> is available for use. This would allow us to have browser trusted
+</I>&gt;<i> certificates for free. You can learn more about this project in this video:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://media.ccc.de/browse/congress/2014/31c3_-_6397_-_en_-_saal_6_-_201412301400_-_let_s_encrypt_-_seth_schoen.html#video">http://media.ccc.de/browse/congress/2014/31c3_-_6397_-_en_-_saal_6_-_201412301400_-_let_s_encrypt_-_seth_schoen.html#video</A>
+</I>&gt;<i>
+</I>&gt;<i> Of course, we are a community, and it is important to discuss these issues
+</I>&gt;<i> where it is our public facing presence being affected, and so I am opening
+</I>&gt;<i> this for discussion on the mailing list. Please reply to this thread with
+</I>&gt;<i> your views on the issue and any proposals you might have for this issue.
+</I>&gt;<i>
+</I>&gt;<i> Thanks for your attention,
+</I>&gt;<i> Iain.
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> e: <A HREF="http://lists.57north.co/listinfo/57north-discuss">irl at fsfe.org</A>            w: iain.learmonth.me
+</I>&gt;<i> x: <A HREF="http://lists.57north.co/listinfo/57north-discuss">irl at jabber.fsfe.org</A>     t: EPVPN 2105
+</I>&gt;<i> c: 2M0STB                  g: IO87we
+</I>&gt;<i> p: 1F72 607C 5FF2 CCD5 3F01 600D 56FF 9EA4 E984 6C49
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 57north-discuss mailing list
+</I>&gt;<i> <A HREF="http://lists.57north.co/listinfo/57north-discuss">57north-discuss at lists.57north.co</A>
+</I>&gt;<i> <A HREF="http://lists.57north.co/listinfo/57north-discuss">http://lists.57north.co/listinfo/57north-discuss</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-- 
+Andy Gaskell
+Head Developer
+Software Systems: Open For Business
+Email: <A HREF="http://lists.57north.co/listinfo/57north-discuss">ag at ssofb.co.uk</A>
+Web: <A HREF="http://www.ssofb.co.uk/">http://www.ssofb.co.uk</A>
+Mobile: 07745 924 449
+Office: 01224 312857
+Skype: andy_at_ssofb
+LinkedIn: <A HREF="http://www.linkedin.com/in/agaskell">http://www.linkedin.com/in/agaskell</A>
+Office: 40 Raeden Park Road, Aberdeen, AB15 5LQ.
+Limited company: SC347800
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20150107/96433ca8/attachment-0001.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20150107/96433ca8/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001498.html">[57north-discuss] TLS Certificates for official 57North services
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001502.html">[57north-discuss] [jones at sdf.org: Re: TLS Certificates for official 57North services]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1499">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1499">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1499">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1499">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001499.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-April/003203.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:04 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Space Network
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20Network&In-Reply-To=%3C6edb4bea-82be-8767-44d6-f40260f3d123%40fsfe.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003202.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003204.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Space Network</H1>
+    <B>Iain R. Learmonth</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20Network&In-Reply-To=%3C6edb4bea-82be-8767-44d6-f40260f3d123%40fsfe.org%3E"
+       TITLE="[57north-discuss] Space Network">irl at fsfe.org
+       </A><BR>
+    <I>Mon Apr 15 11:49:21 BST 2019</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003202.html">[57north-discuss] Space Network
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003204.html">[57north-discuss] Space Network
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/date.html#3203">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/thread.html#3203">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/subject.html#3203">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/author.html#3203">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+On 15/04/2019 11:20, Alfie Pates wrote:
+&gt;<i> This is very cool - I have been wanting to play with the pcE boxes for a
+</I>&gt;<i> while.
+</I>
+They are very nice, super stable boxes. They have changed my life.
+
+&gt;<i> However, I've got a few concerns. Primarily, this does not sound super
+</I>&gt;<i> maintainable, and also sounds a little bit more broken than it was
+</I>&gt;<i> before. Is there any firewalling in place, etc?
+</I>
+We have pf running on the OpenBSD box. I plan to put the rules into a
+git repository that we would accept pull requests on, for example for
+people to do port forwarding.
+
+I'm not sure yet if this will take the form of just having the files
+there and a script that will copy them, or going full Ansible on it.
+
+&gt;<i> I am currently running a bsdrp router alongside my Juniper setup at home
+</I>&gt;<i> and I am quite familiar with now unmanageable these boxes can get if
+</I>&gt;<i> you're not intimately familiar with BSD networking.
+</I>
+I am pretty familiar with BSD networking. If there are others that would
+like to be involved in running the space network, I am happy to assist
+them until they can do it on their own.
+
+The OpenBSD manpages are excellent at describing the various options for
+drivers (we are using em, trunk, gif, gre, and vlan).
+
+We currently are using only static routes but once some dn42 peers have
+tunnels we will start using OpenBGPD.
+
+&gt;<i> I would maybe suggest that the Er-X is the better device for this - it
+</I>&gt;<i> may not quite be the awesome open-source gateway that we'd *like* to
+</I>&gt;<i> have in the space, but it's a lot more maintainable by more people.
+</I>
+We shouldn't have everyone maintaining the device that provides everyone
+with Internet. It should be stable, reliable, do the right thing when
+you turn it off and on again, and generally not get in the way.
+
+&gt;<i> Re: switches, I've had a few of the various Netgear managed switches -
+</I>&gt;<i> the CLI is an absolute horror and the web interface doesn't always
+</I>&gt;<i> &quot;take&quot;. My home network is currently hanging off a managed TP-link
+</I>&gt;<i> switch which didn't cost very much and is a lot friendlier. My last
+</I>&gt;<i> Netgear also went pop and decided not to do PoE once, taking an access
+</I>&gt;<i> point with it.
+</I>
+I too have had various Netgear switches and I know that the CLI isn't
+the best. If there are TP-Link alternatives then we should look at
+those. The problem we have is mostly the depth of the cabinet. Again
+though, configuration changes should not be necessary on this switch
+that often, it is providing a base infrastructure for others to build on
+top of and should really just be forwarding packets.
+
+Also, if someone already has a managed 1U 24 port switch that is not
+that deep and would like to donate it, that would be super awesome.
+
+We have a whole bunch of Cisco kit if people want to play, build test
+networks, learn stuff, etc. If this switch is messed up then we can't
+open the door so access should really be restricted.
+
+&gt;<i> DN42 is exciting, however. More of that!
+</I>
+If you're not already set up on dn42, you can take a look at the wiki.
+
+<A HREF="https://wiki.dn42.us/Home">https://wiki.dn42.us/Home</A>
+
+Thanks,
+Iain.
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003202.html">[57north-discuss] Space Network
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003204.html">[57north-discuss] Space Network
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/date.html#3203">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/thread.html#3203">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/subject.html#3203">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/author.html#3203">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-April/003203.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:04 GMT -->
+</html>

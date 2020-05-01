@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-June/000813.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:02 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Bug Finding
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bug%20Finding&In-Reply-To=%3C1402014853.18065.125739529.778F4FE1%40webmail.messagingengine.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000812.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000814.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Bug Finding</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bug%20Finding&In-Reply-To=%3C1402014853.18065.125739529.778F4FE1%40webmail.messagingengine.com%3E"
+       TITLE="[57north-discuss] Bug Finding">rmcw at allmail.net
+       </A><BR>
+    <I>Fri Jun  6 00:34:13 UTC 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000812.html">[57north-discuss] Bug Finding
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000814.html">[57north-discuss] New Sensors System
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/date.html#813">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/thread.html#813">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/subject.html#813">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/author.html#813">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Fri, Jun 6, 2014, at 12:05 AM, Iain R. Learmonth wrote:
+&gt;<i> On Thu, Jun 05, 2014 at 11:15:33PM +0100, Calum Enterobsidian wrote:
+</I>&gt;<i> &gt; Spotted an issue with the door opening system, I paid my membership on
+</I>&gt;<i> &gt; tuesday and Carl updated it, but it says I'm unable to open it because I
+</I>&gt;<i> &gt; haven't paid. As far as I know, I've never had it say that I've paid, even
+</I>&gt;<i> &gt; though my membership is always up to date. 
+</I>&gt;<i> 
+</I>&gt;<i> According to the database, you are marked as paid.
+</I>&gt;<i> 
+</I>&gt;<i> According to Rob, this should give you the correct criteria for opening
+</I>&gt;<i> the
+</I>&gt;<i> door.
+</I>&gt;<i> 
+</I>&gt;<i> According to you, it doesn't work.
+</I>&gt;<i> 
+</I>&gt;<i> One of these things is broken.
+</I>&gt;<i> 
+</I>
+Hmm, I've done some poking and hackhub is definitely supposed to be
+checking the right thing [1]. 
+
+What it's checking currently returns True for Enterobsidian. That check
+returning False is the only reason you should get the message that you
+have to pay. Only possibilities I can think of for how you would manage
+to get that message today would be if it was being cached somewhere (I'm
+pretty sure it's not being cached by hackhub - things between there and
+your device are unfortunately outside my control[2]) or you're (or
+rather whatever device you were using is) logged in as someone else. 
+
+I guess grab me next time you're at the space (or anybody is at the
+space, so it's OK to be unlocking the door) and I can try adding some
+debug output to see what's going wrong. 
+
+If anybody else is seeing this message when they think they shouldn't
+please speak up: more data points might point to what's going wrong. 
+
+If anybody else wants to have a look at the code they should speak up
+too[3]. All bugs are shallow with enough eyes etc.
+
+Robert
+
+[1] For certain values of right: it checks if the user has a recorded
+payment for either of the last two months. This isn't the correct
+definition of member according to our articles of assocition, but surely
+nobody believes anything written in the articles...
+
+[2] Come the revolution...
+
+[3] This is my umpteenth reminder that I should really get this code
+published...
+
+-- 
+Robert McWilliam      <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    www.ormiret.com
+
+Disclaimer: Opinions cited by me are not necessarily my opinions. 
+Facts cited by me are not necessarily facts.
+</PRE>
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000812.html">[57north-discuss] Bug Finding
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000814.html">[57north-discuss] New Sensors System
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/date.html#813">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/thread.html#813">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/subject.html#813">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/author.html#813">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-June/000813.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:02 GMT -->
+</html>

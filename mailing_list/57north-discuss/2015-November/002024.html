@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-November/002024.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:45 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Missing component
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Missing%20component&In-Reply-To=%3CAMSPR01MB0186FDD83B96C744690C0C6E61D0%40AMSPR01MB018.eurprd01.prod.exchangelabs.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-November/002022.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-November/002025.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Missing component</H1>
+    <B>Tanev, Ventsislav</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Missing%20component&In-Reply-To=%3CAMSPR01MB0186FDD83B96C744690C0C6E61D0%40AMSPR01MB018.eurprd01.prod.exchangelabs.com%3E"
+       TITLE="[57north-discuss] Missing component">v.tanev.11 at aberdeen.ac.uk
+       </A><BR>
+    <I>Tue Nov 17 17:00:18 GMT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-November/002022.html">[57north-discuss] Missing component
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-November/002025.html">[57north-discuss] Missing component
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/date.html#2024">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/thread.html#2024">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/subject.html#2024">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/author.html#2024">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>For the logging of data I was originally thinking of running a loop and constantly sending messages. Then measuring the current consumption with the multimeter and getting some average over 20 sec. The other option - with the current sensor would be to do a measurement every 50ms for 20 sec and send every measurement from the sensor over the serial to my laptop. I might be approaching this from the wrong side... I like the idea of using a button to build and send messages. I don't consider myself expert in electronics, but here is how I was envisioning this in my head (see attached ProjectDiagram.png). Arduino 3 would be used purely to utilize the current sensor. It would measure the current consumption of Arduino 1 then the current consumption on Arduino 2; hence the dashed lines.
+
+
+Example setup and run (purely theoretical) for measuring current consumption on Arduino 2:
+
+
+Arduino 3:
+
+    SETUP
+
+    set pin 11 as Output (Arduino 2 pin 12)
+
+    set pin 12 as Input (Arduino 2 pin 11)
+
+    LOOP
+
+    if some event (button press or input from Serial) occurs
+
+        set pin 11 to HIGH (to start Arduino 2)
+
+        start measuring current on Arduino 2
+
+
+    if pin 12 is HIGH
+
+        stop measuring current on Arduino 2
+
+        set pin 11 to LOW
+
+
+Arduino 2:
+
+    SETUP
+    set pin 11 as Output (Arduino 3 pin 12)
+    set pin 12 as Input (Arduino 3 pin 11)
+    LOOP
+    if pin 12 is HIGH
+        read sensor data
+        construct message (character string or object depending on the method being tested)
+        send message
+        set pin 11 to HIGH
+        delay(?) not sure for synchronisation???
+    else
+        set pin 11 to LOW
+
+Throwing this aside I must admit I'm not familiar with the functionality of Red Pitaya, but from what you've written it might work in place of Arduino 3 in my design.
+
+Regards,
+Ventsislav
+
+________________________________
+From: Robert McWilliam &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>&gt;
+Sent: 17 November 2015 13:47
+To: Tanev, Ventsislav; <A HREF="http://lists.57north.co/listinfo/57north-discuss">57north-discuss at lists.57north.co</A>
+Subject: Re: [57north-discuss] Missing component
+
+On Tue, Nov 17, 2015, at 12:37, Tanev, Ventsislav wrote:
+
+I was originally hoping to measure the current consumption with a multimeter, but the current consumption might fluctuate too quick for me to register meaningful data. What I believe will work is to measure how much power will be consumed with a current sensor (ACS712) and log the data. However as I don't have such sensor and the estimated delivery for one is way past my deadline I was hoping that you guys have 1 I could borrow.
+
+In all cases any feedback would be greatly appreciated [??]
+
+I think the current sensor chips are overkill for what you're doing here (and the power changes you'll be looking at will be a few orders of magnitude from what they're designed for so might be lost in the noise): the devices you're looking at are powered by low voltage DC; just put a known small resistor in the power line and measure the voltage across it.
+
+The (slightly more) complicated part will be logging the data. What kind of time frame are you talking about for the building and sending the message/object? I expect it's much shorter than you have any change of getting with a multimeter, pencil and paper. I have a Red Pitaya[1] in the space that I think would work for this. It could be set up to grab voltage readings at whatever period is needed (well, probably: max sample rate is 125MS/s) based on trigger on the other channel, then put one channel over the resistor and the other to a button that's also connected to the pi/arduino to trigger message building and sending. Can have the data output to python or matlab (or some other places) for further processing.
+
+Robert
+
+[1] <A HREF="http://redpitaya.com/">http://redpitaya.com/</A>
+
+--
+Robert McWilliam <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A> www.ormiret.com
+
+Cleverly disguised as a responsible adult.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20151117/71ef306c/attachment-0001.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20151117/71ef306c/attachment-0001.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: ProjectDiagram.png
+Type: image/png
+Size: 24166 bytes
+Desc: ProjectDiagram.png
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20151117/71ef306c/attachment-0001.png">http://lists.57north.co/pipermail/57north-discuss/attachments/20151117/71ef306c/attachment-0001.png</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-November/002022.html">[57north-discuss] Missing component
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-November/002025.html">[57north-discuss] Missing component
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/date.html#2024">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/thread.html#2024">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/subject.html#2024">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-November/author.html#2024">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-November/002024.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:45 GMT -->
+</html>

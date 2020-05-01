@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-April/003205.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:04 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Space Network
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20Network&In-Reply-To=%3Cc20a5d44-e201-65a3-4221-2cc6953204b5%40fsfe.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003204.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003206.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Space Network</H1>
+    <B>Iain R. Learmonth</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20Network&In-Reply-To=%3Cc20a5d44-e201-65a3-4221-2cc6953204b5%40fsfe.org%3E"
+       TITLE="[57north-discuss] Space Network">irl at fsfe.org
+       </A><BR>
+    <I>Mon Apr 15 12:27:24 BST 2019</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003204.html">[57north-discuss] Space Network
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003206.html">[57north-discuss] [57north-announce] 2019 AGM &amp; Hacking
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/date.html#3205">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/thread.html#3205">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/subject.html#3205">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/author.html#3205">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+On 15/04/2019 12:16, Alfie Pates wrote:
+&gt;<i> I'm just a *little* concerned that this is sounds like a large number of moving parts for what is effectively a SMB network with a little site-to-site connectivity tacked on the side.
+</I>
+I have replaced 2 boxes with 1, and removed a NAT. This is definitely
+reducing the number of parts and making it easier to understand. Last
+night it took a lot of testing to work out whether or not the AP was
+also acting as a NAT. It kinda looked like it was but in the end it
+wasn't it just does some weird DHCP/DNS proxying thing.
+
+&gt;<i> I'm not suggesting that people will be tinkering 24/7 - an unspoken rule of most spaces I've spent time is &quot;don't hack the caffeine, don't hack the wifi&quot; because once these two things are missing people get grumpy :P - but I am suggesting that if something breaks or a change (for which there is consensus) needs to be made, jumping through 75 different badly documented hoops is going to lead to somebody making a mistake and breaking something, somewhere. I've been there - it's not fun. 
+</I>
+I'd like the whole system to be rebuildable from scratch with a
+documented process so that if it really does go wrong, you can unplug
+the box, install OpenBSD on it, run a script or ansible playbook, and
+it's back at a known working configuration, then plug it back in. Any
+member should be able to follow these instructions in an emergency, but
+should also never have to.
+
+Why are there 75 hoops to jump through? All the configuration is
+declarative and stored in /etc. Assuming you've built consensus, that's
+probably also enough time that someone has produced a patch to the conf
+files.
+
+&gt;<i> If you can build something reliable, widely-understood and maintainable, I am super in favour of that. More so if it's built around open-source components and is redistributable - I'd be happy to contribute to that, actually. 
+</I>
+This is the idea. It's built on the same setup as my home router and I'd
+like to only have to know one system.
+
+&gt;<i> If this is another magical black box that only one or two people really understand... well, you're putting yourself at risk of 3AM phonecalls when the network breaks :D
+</I>
+It is a black box, but it's not magic. I want to restrict random
+changes, but I also want the configuration to be transparent for those
+that want to see it and/or submit patches to improve the space or for
+their projects.
+
+I think GNS3 allows you to have QEMU VMs as part of the network, so you
+could even stand up a replica of the space network to test your
+configurations virtually before making patches.
+
+&gt;<i> The TP-link switches are very shallow - my rack at home is 300mm deep (versus the normal 600mm carrier suite rack) and the TP-links fit easily. I'll see if I have a spare one going.
+</I>
+That would be awesome!
+
+Thanks,
+Iain.
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003204.html">[57north-discuss] Space Network
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003206.html">[57north-discuss] [57north-announce] 2019 AGM &amp; Hacking
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/date.html#3205">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/thread.html#3205">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/subject.html#3205">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/author.html#3205">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-April/003205.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:04 GMT -->
+</html>

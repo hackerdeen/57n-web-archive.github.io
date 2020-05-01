@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-October/003026.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:10 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Relay audio switching distro thing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Relay%20audio%20switching%20distro%20thing&In-Reply-To=%3C20181013183036.GA9153%40afegru%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-October/003025.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-October/003027.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Relay audio switching distro thing</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Relay%20audio%20switching%20distro%20thing&In-Reply-To=%3C20181013183036.GA9153%40afegru%3E"
+       TITLE="[57north-discuss] Relay audio switching distro thing">rmcw at allmail.net
+       </A><BR>
+    <I>Sat Oct 13 19:30:37 BST 2018</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-October/003025.html">[57north-discuss] Magic URLs to unlock the door
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-October/003027.html">[57north-discuss] Bringing old speakers back in to use
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/date.html#3026">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/thread.html#3026">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/subject.html#3026">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/author.html#3026">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I've had vague plans for a while to build a relay based sound
+distribution thing for the space. Looking back at orders for some of the
+parts shows I started collecting bits to do this in June...
+
+I think I've firmed up the plans enough now that I might be ready to
+actually do it so thought I'd let you all knwo what the plan is and see
+if there is consensus that this is something we want in the space. I
+also have plans for a similar setup at home so the parts can go there if
+the space doesn't want it.
+
+I'm thinking to make 2 4x4 crossbar switches (one for each stereo
+channel) to connect any of the 4 inputs to 4 outputs. Plus a pi of some
+description driving shift registers to control the relays and have a web
+interface of some description to let people pick which input should be
+connected to where. Or might put a nodemcu in for the feeding the shift
+registers and have the web side running on alford (that would make more
+sense if it is also (going to be) running interface to control the
+lights).
+
+I know there are &quot;better&quot; ways to switch audio signals but I like the
+clicky noises relays make so want to do it this way. I'm actually very
+tempted to have extra switching the relays on and off whenever it
+changes things just to have more clicky noises.
+
+4 inputs I'm thinking: pimpd, chromecast audio, bluetooth and 3.5mm
+jack. I have a bluetooth board for that input, and the others are there
+already.
+
+For the outputs I have 4 amp boards whose listing has vanished from
+Amazon but are very similar to this one (same amp chip and look similar,
+except the PCB is red):
+<A HREF="https://www.amazon.co.uk/KKmoon-TDA7498-Channel-Digital-Amplifier/dp/B019Z7BGVK/ref=sr_1_fkmr0_1?ie=UTF8&amp;qid=1539449578&amp;sr=8-1-fkmr0">https://www.amazon.co.uk/KKmoon-TDA7498-Channel-Digital-Amplifier/dp/B019Z7BGVK/ref=sr_1_fkmr0_1?ie=UTF8&amp;qid=1539449578&amp;sr=8-1-fkmr0</A>
+
+One of them is currently driving the speakers in the main room.
+
+I have a spare pair of speakers that can be donated for this, and
+possibly antoher pair that I could steal from their current use. That
+still leaves 1 pair short though: if anyone has any bookshelf style
+speakers (or car speakers)they could donate that would be
+great. Otherwise I can see what can be found on eBay.
+
+I'm thinking two pairs of speakers in the main room; one pair at the end
+they currently are and a pair in the corners by the roof at the other
+end of the room. One pair somewhere in the workshop and one pair in the
+snug.
+
+I don't have any plans for adding anything upstairs to this (mostly
+because I can't be bothered running cables between, but it could be
+extended to have more outputs (or move one of the ones from downstairs)
+if folks think that would be better.
+
+Parts I (or the space) already have:
+ - relay boards (2* 16 relay boards for switches and 1 * 8 channel for
+   mutes on the amp boards)
+ - 4 * amp boards
+ - Bluetooth input board
+ - pimpd
+ - chromecast audio
+ - 24V 15A power supply (Not actually enough to max all 4 amps but
+   probably plenty loud enough).
+ - Pi and/or nodemcu
+ - shift registers
+ - 2 (or 3) pairs of bookshelf speakers.
+
+I think more/better speakers are the only parts I'm still looking for.
+ 
+So, thoughts? Objections? Anyone want to help (greatly increases the
+chances of it getting done in the near future if anyone else wants to
+get involved)?
+
+Robert
+________________________________________________________
+Robert McWilliam     <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    argh.technology
+
+The purpose of life is to fight maturity.
+     -- Dick Wirthimer 
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-October/003025.html">[57north-discuss] Magic URLs to unlock the door
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-October/003027.html">[57north-discuss] Bringing old speakers back in to use
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/date.html#3026">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/thread.html#3026">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/subject.html#3026">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-October/author.html#3026">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-October/003026.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:10 GMT -->
+</html>

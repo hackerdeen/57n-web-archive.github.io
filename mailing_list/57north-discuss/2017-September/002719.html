@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2017-September/002719.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:23 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Shitty VMs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Shitty%20VMs&In-Reply-To=%3C0fc6ef47-2852-d347-3c71-c6b78a370d36%40minke-informatics.co.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2017-September/002718.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2017-September/002720.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Shitty VMs</H1>
+    <B>Tony Travis</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Shitty%20VMs&In-Reply-To=%3C0fc6ef47-2852-d347-3c71-c6b78a370d36%40minke-informatics.co.uk%3E"
+       TITLE="[57north-discuss] Shitty VMs">tony.travis at minke-informatics.co.uk
+       </A><BR>
+    <I>Wed Sep  6 23:42:20 BST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-September/002718.html">[57north-discuss] Shitty VMs
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-September/002720.html">[57north-discuss] The space is almost 4 years old
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/date.html#2719">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/thread.html#2719">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/subject.html#2719">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/author.html#2719">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 06/09/17 23:32, Iain R. Learmonth wrote:
+&gt;<i> Hi Tony,
+</I>&gt;<i>
+</I>&gt;<i> On 06/09/17 22:55, Tony Travis wrote:
+</I>&gt;&gt;<i> I guess you already know about the AWS 'free' tier:
+</I>&gt;<i> Seems a little too reliable with a little too much resource available.
+</I>&gt;<i> Plus it seems to support IPv4, which I hear is used by criminals for
+</I>&gt;<i> ~cybercrime~.
+</I>
+Hi, Iain.
+
+Well, you might want to try the 'free' Google Cloud Shell:
+
+&gt;<i> <A HREF="https://cloud.google.com/shell/docs/">https://cloud.google.com/shell/docs/</A>
+</I>
+Welcome to Cloud Shell! Type &quot;help&quot; to get started.
+<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony_travis at optimal-card-179122</A>:~$ dmesg | head
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.16.0-4-amd64
+(<A HREF="http://lists.57north.co/listinfo/57north-discuss">debian-kernel at lists.debian.org</A>) (gcc version 4.8.4 (Debian 4.8.4-1) )
+#1 SMP Debian 3.16.43-2+deb8u3 (2017-08-15
+)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.16.0-4-amd64
+root=UUID=d3af367a-e809-4c84-9f09-973a257d2584 ro console=ttyS0,38400n8
+panic=10 oops=pa
+nic cgroup_enable=memory console=ttyS0
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff]
+reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff]
+reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000265fcfff] usable
+<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony_travis at optimal-card-179122</A>:~$ df -HT
+Filesystem     Type   Size  Used Avail Use% Mounted on
+none           aufs    27G   17G  8.2G  68% /
+tmpfs          tmpfs  312M     0  312M   0% /dev
+tmpfs          tmpfs  312M     0  312M   0% /sys/fs/cgroup
+/dev/sdb1      ext4   5.2G   11M  4.9G   1% /home
+/dev/sda1      ext4    27G   17G  8.2G  68% /etc/hosts
+tmpfs          tmpfs   63M  439k   62M   1% /run/orion
+shm            tmpfs   68M     0   68M   0% /dev/shm
+<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony_travis at optimal-card-179122</A>:~$ Welcome to Cloud Shell! Type &quot;help&quot;
+to get started.
+@optimal-card-179122:~$ df -HT
+Filesystem     Type   Size  Used Avail Use% Mounted on
+none           aufs    27G   17G  8.2G  68% /
+tmpfs          tmpfs  312M     0  312M   0% /dev
+tmpfs          tmpfs  312M     0  312M   0% /sys/fs/cgroup
+
+Google's mission statement is &quot;Don't be evil&quot; so their resources won't
+appeal to Cyber-criminals :-)
+
+Why not try it - You know you want to:
+
+&gt;<i> <A HREF="https://cloud.google.com/free/">https://cloud.google.com/free/</A>
+</I>
+YMMV,
+
+  Tony.
+
+-- 
+Minke Informatics Limited, Registered in Scotland - Company No. SC419028
+Registered Office: 3 Donview, Bridge of Alford, AB33 8QJ, Scotland (UK)
+tel. +44(0)19755 63548                    <A HREF="http://minke-informatics.co.uk/">http://minke-informatics.co.uk</A>
+mob. +44(0)7985 078324        mailto:<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony.travis at minke-informatics.co.uk</A>
+
+
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-September/002718.html">[57north-discuss] Shitty VMs
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-September/002720.html">[57north-discuss] The space is almost 4 years old
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/date.html#2719">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/thread.html#2719">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/subject.html#2719">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-September/author.html#2719">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2017-September/002719.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:23 GMT -->
+</html>

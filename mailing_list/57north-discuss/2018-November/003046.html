@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-November/003046.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:09 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Fwd%3A%20Your%20BitFolk%20VPSes%20%28%22finzean%22%2C%0A%20%22garioch%22%29%20need%20to%20be%20rebooted%20for%20critical%20maintenance&In-Reply-To=%3C1542016323.1848061.1573747360.2066465E%40webmail.messagingengine.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-November/003045.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-November/003047.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Fwd%3A%20Your%20BitFolk%20VPSes%20%28%22finzean%22%2C%0A%20%22garioch%22%29%20need%20to%20be%20rebooted%20for%20critical%20maintenance&In-Reply-To=%3C1542016323.1848061.1573747360.2066465E%40webmail.messagingengine.com%3E"
+       TITLE="[57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance">rmcw at allmail.net
+       </A><BR>
+    <I>Mon Nov 12 09:52:03 GMT 2018</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-November/003045.html">[57north-discuss] Tuesday Openday
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-November/003047.html">[57north-discuss] [57north-announce] Open Tuesday November 13
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/date.html#3046">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/thread.html#3046">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/subject.html#3046">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/author.html#3046">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>VPS reboots coming up early hours of 18th. 
+
+I'm reasonably confident things will come back up after the reboot, but services will be unavailable for a while for the reboot and if you notice anything not working after that: shout and someone will have a look.
+
+Robert
+
+________________________________________________________
+Robert McWilliam     <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    argh.technology
+
+Long periods of drought are always followed by rain.
+
+----- Original message -----
+From: <A HREF="http://lists.57north.co/listinfo/57north-discuss">andy at bitfolk.com</A>
+To: Robert McWilliam &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>&gt;
+Subject: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance
+Date: Sat, 10 Nov 2018 03:16:34 +0000
+
+Dear customer,
+
+We've recently been made aware of some serious security issues in the
+hypervisor software that we use (Xen). Fixing these problems will
+require us to reboot our hosts and therefore all customer VPSes must
+also be rebooted (or experience suspend/restore - see below).
+
+You do not need to respond to this email unless you have questions about
+the process.
+
+We must apply these fixes to ensure the security and reliability both of
+your VPSes and of our infrastructure, which is why we have no choice but
+to proceed with this work in the short period of time between
+notification and the end of the embargo.
+
+I understand that this will prove disruptive to you and that you would
+prefer much more notice. In better circumstances we do provide more
+notice and allow for deferrals or moving VPSes between hosts, but the
+seriousness of this issue means that we need to reboot everything before
+the embargo on the details ends (12:00Z 20 November 2018).
+
+Your VPSes have been assigned a maintenance window during which the
+reboots will take place. The start of the maintenance window for each of
+your VPSes is listed below, in UTC time zone. Each maintenance window is
+up to 60 minutes long, though the work should be completed much sooner
+than this, typically within a few minutes (yay, SSDs!).
+
++-----------------+---------------+--------------------+
+|<i> Name            | Main IPv4     | Window start (UTC) |
+</I>+-----------------+---------------+--------------------+
+|<i>         finzean | 85.119.82.172 | 2018-11-18 00:30   |
+</I>|<i>         garioch | 85.119.84.59  | 2018-11-18 01:30   |
+</I>+-----------------+---------------+--------------------+
+
+At some point in each maintenance window your VPS will be cleanly shut
+down. The host it is on will then be patched and rebooted, and then your
+VPS will be brought up again.
+
+You should ensure that your VPS and all its services start up correctly
+on boot. We offer a free Nagios monitoring service which can help you to
+know if your VPS and its services are working correctly. If you have not
+done so already then you may want to get in touch with us to have this
+set up. You can do that by replying to this email and describing which
+services you would like monitored.
+
+If you would prefer for us to attempt to suspend and restore your VPS
+to/from storage, resulting in less disruption, then you can indicate
+that preference on our web panel at:
+
+    <A HREF="https://panel.bitfolk.com/account/config/#prefs">https://panel.bitfolk.com/account/config/#prefs</A>
+
+Doing so will cause us to add Nagios ping checks for your VPS so we can
+have a good chance at knowing if the restore was successful.
+
+If you have any questions please reply to this email, which will open a
+support ticket. Please note however that we cannot change the date or
+time of the planned maintenance. There is no need to reply to this email
+unless you have further questions, or wish to request Nagios monitoring.
+
+Best regards,
+Andy Smith
+BitFolk Ltd
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-November/003045.html">[57north-discuss] Tuesday Openday
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-November/003047.html">[57north-discuss] [57north-announce] Open Tuesday November 13
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/date.html#3046">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/thread.html#3046">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/subject.html#3046">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-November/author.html#3046">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-November/003046.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:09 GMT -->
+</html>

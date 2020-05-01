@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-ctte/2020-March/000341.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:14:02 GMT -->
+<HEAD>
+   <TITLE> [57north-ctte] Fwd: ACTION REQUIRED: Renew these Let's Encrypt certificates by March 4
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-ctte%40lists.57north.co?Subject=Re%3A%20%5B57north-ctte%5D%20%3D%3Futf-8%3Fq%3FFwd%3D3A_ACTION_REQUIRED%3D3A_Renew_these_Le%3F%3D%0A%20%3D%3Futf-8%3Fq%3Ft%3D27s_Encrypt_certificates_by_March_4%3F%3D&In-Reply-To=%3Cdc8c7dff-2eb3-4da7-a743-731914170649%40www.fastmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-ctte/2020-March/000342.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-ctte] Fwd: ACTION REQUIRED: Renew these Let's Encrypt certificates by March 4</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-ctte%40lists.57north.co?Subject=Re%3A%20%5B57north-ctte%5D%20%3D%3Futf-8%3Fq%3FFwd%3D3A_ACTION_REQUIRED%3D3A_Renew_these_Le%3F%3D%0A%20%3D%3Futf-8%3Fq%3Ft%3D27s_Encrypt_certificates_by_March_4%3F%3D&In-Reply-To=%3Cdc8c7dff-2eb3-4da7-a743-731914170649%40www.fastmail.com%3E"
+       TITLE="[57north-ctte] Fwd: ACTION REQUIRED: Renew these Let's Encrypt certificates by March 4">rmcw at allmail.net
+       </A><BR>
+    <I>Tue Mar  3 18:02:23 GMT 2020</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-ctte/2020-March/000342.html">[57north-ctte] Fwd: ACTION REQUIRED: Renew these Let's Encrypt	certificates by March 4
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/date.html#341">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/thread.html#341">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/subject.html#341">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/author.html#341">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Email saying to do the thing we discussed earlier turned up.
+
+Robert
+________________________________________________________
+Robert McWilliam     <A HREF="http://lists.57north.co/listinfo/57north-ctte">rmcw at allmail.net</A>    argh.technology
+
+What do you consider to be your median achievement?
+
+----- Original message -----
+From: <A HREF="http://lists.57north.co/listinfo/57north-ctte">noreply at letsencrypt.org</A>
+To: <A HREF="http://lists.57north.co/listinfo/57north-ctte">rmcw at allmail.net</A>
+Subject: ACTION REQUIRED: Renew these Let's Encrypt certificates by March 4
+Date: Tuesday, 3 March 2020 17:56
+
+We recently discovered a bug in the Let's Encrypt certificate authority code, 
+described here:
+
+<A HREF="https://community.letsencrypt.org/t/2020-02-29-caa-rechecking-bug/114591">https://community.letsencrypt.org/t/2020-02-29-caa-rechecking-bug/114591</A>
+
+Unfortunately, this means we need to revoke the certificates that were affected 
+by this bug, which includes one or more of your certificates. To avoid 
+disruption, you'll need to renew and replace your affected certificate(s) by 
+Wednesday, March 4, 2020. We sincerely apologize for the issue.
+
+If you're not able to renew your certificate by March 4, the date we are 
+required to revoke these certificates, visitors to your site will see security 
+warnings until you do renew the certificate. Your ACME client documentation 
+should explain how to renew.
+
+If you are using Certbot, the command to renew is:
+
+certbot renew --force-renewal
+
+If you need help, please visit our community support forum: 
+<A HREF="https://community.letsencrypt.org/t/revoking-certain-certificates-on-march-4/114864">https://community.letsencrypt.org/t/revoking-certain-certificates-on-march-4/114864</A>
+
+Please search thoroughly for a solution before you post a new question. Let's 
+Encrypt staff will help our community try to answer unresolved questions as 
+quickly as possible.
+
+
+Your affected certificate(s), listed by serial number and domain names:
+
+0316112599743803b55e28453d2a35f76715: 57north.co 57north.org.uk git.57north.org.uk lists.57north.co www.57north.co www.57north.org.uk
+
+If you are receiving this email in error, unsubscribe at:
+  <A HREF="http://mandrillapp.com/track/unsub.php?u=30850198&amp;id=7bf5912283d048c2936cdc3e3bb95ec8.k%2BTFOh8ZiO3zXrCd9vBQFegdKSA%3D&amp;r=https%3A%2F%2Fmandrillapp.com%2Funsub%3Fmd_email%3Drmcw%2540allmail.net">http://mandrillapp.com/track/unsub.php?u=30850198&amp;id=7bf5912283d048c2936cdc3e3bb95ec8.k%2BTFOh8ZiO3zXrCd9vBQFegdKSA%3D&amp;r=https%3A%2F%2Fmandrillapp.com%2Funsub%3Fmd_email%3Drmcw%2540allmail.net</A>
+Please note that this would also unsubscribe you from other Let's Encrypt 
+service notices, like expiration reminders.
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-ctte/2020-March/000342.html">[57north-ctte] Fwd: ACTION REQUIRED: Renew these Let's Encrypt	certificates by March 4
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/date.html#341">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/thread.html#341">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/subject.html#341">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-ctte/2020-March/author.html#341">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-ctte">More information about the 57north-ctte
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-ctte/2020-March/000341.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:14:03 GMT -->
+</html>

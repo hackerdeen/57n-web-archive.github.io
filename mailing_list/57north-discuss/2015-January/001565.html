@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001565.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] SSH access to doorbot + hosting stuff in the space
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20SSH%20access%20to%20doorbot%20%2B%20hosting%20stuff%20in%20the%0A%20space&In-Reply-To=%3C20150117193324.GC9978%40eblueer-debian%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001564.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001566.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] SSH access to doorbot + hosting stuff in the space</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20SSH%20access%20to%20doorbot%20%2B%20hosting%20stuff%20in%20the%0A%20space&In-Reply-To=%3C20150117193324.GC9978%40eblueer-debian%3E"
+       TITLE="[57north-discuss] SSH access to doorbot + hosting stuff in the space">rmcw at allmail.net
+       </A><BR>
+    <I>Sat Jan 17 19:33:24 UTC 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001564.html">[57north-discuss] SSH access to doorbot + hosting stuff in the space
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001566.html">[57north-discuss] SSH access to doorbot + hosting stuff in the	space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1565">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1565">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1565">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1565">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Wed, Jan 14, 2015 at 08:40:23AM +0000, Andrea Faulds wrote:
+&gt;<i>  I don&#8217;t think allowing access to doorbot is bad, allowing *sudo*
+</I>&gt;<i> access is. If it weren&#8217;t for sudo access, I wouldn&#8217;t have been able
+</I>&gt;<i> to do `sudo killall sshd`. (Again, I&#8217;m really sorry about that.)
+</I>&gt;<i>
+</I>&lt;snip&gt;
+&gt;<i>  One option would just be to run all the toys in a VM on doorbot and
+</I>&gt;<i> give people access to the VM. It&#8217;d be slow, sure, but none of this
+</I>&gt;<i> stuff really needs to be ultra-fast, and if someone screws up, only
+</I>&gt;<i> the toys are lost.
+</I>
+Sorry for the slow response, I'm slowly catching up on emails...
+
+There is a lot you can do to mess up a machine without root
+privileges if you can run arbitrary code. 
+
+VMs are a nice way to keep things in a properly managed jail but I
+haven't seen any VM tech that would have an easy way to give access to
+hardware (usually USB devices for what we've been using up to now)
+without giving access to all the devices which could let you break
+(current) doorbot.
+
+Basically, setting up stuff so that we can have &quot;playing&quot; on doorbot with
+any confidence that such playing can't break door access is more faff
+than I can be bothered with. I'd rather just use another machine that
+we're not relying on for playing. If someone else has a sane plan to
+set up jails of some description on doorbot and really wants to do
+that I could probably be convinced to give you access to do it.   
+
+Robert
+________________________________________________________
+Robert McWilliam     <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    www.ormiret.com
+
+Unix is user friendly - it's just picky about it's friends.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 836 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20150117/58570d9b/attachment.sig">http://lists.57north.co/pipermail/57north-discuss/attachments/20150117/58570d9b/attachment.sig</A>&gt;
+</PRE>
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001564.html">[57north-discuss] SSH access to doorbot + hosting stuff in the space
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001566.html">[57north-discuss] SSH access to doorbot + hosting stuff in the	space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1565">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1565">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1565">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1565">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001565.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+</html>

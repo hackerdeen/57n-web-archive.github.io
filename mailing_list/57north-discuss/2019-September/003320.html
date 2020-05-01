@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-September/003320.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:14:59 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] 16 x 2 LCD screen in Japenese font
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%2016%20x%202%20LCD%20screen%20in%20Japenese%20font&In-Reply-To=%3C4b8ea5d8-b522-4d05-be1b-a001df6a817b%40www.fastmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-September/003319.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-September/003321.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] 16 x 2 LCD screen in Japenese font</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%2016%20x%202%20LCD%20screen%20in%20Japenese%20font&In-Reply-To=%3C4b8ea5d8-b522-4d05-be1b-a001df6a817b%40www.fastmail.com%3E"
+       TITLE="[57north-discuss] 16 x 2 LCD screen in Japenese font">rmcw at allmail.net
+       </A><BR>
+    <I>Tue Sep  3 14:07:17 BST 2019</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-September/003319.html">[57north-discuss] 16 x 2 LCD screen in Japenese font
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-September/003321.html">[57north-discuss] 16 x 2 LCD screen in Japenese font
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/date.html#3320">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/thread.html#3320">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/subject.html#3320">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/author.html#3320">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Tue, 3 Sep 2019, at 13:36, Wouter Piessens wrote:
+&gt;<i> Kevin, Robert,
+</I>&gt;<i> 
+</I>&gt;<i> I do suspect too that it is the Japanese type, though from contact with Pimoroni today I understand it should be possible to set the standard font to the other languages....I will bring the module this evening (after the event at Codebase one) to tinker with it (and listen to complaints about sore backs ;-) )
+</I>&gt;<i> 
+</I>
+Pimoroni thinking it should be fine convinced me to look a bit further into the datasheet. There is table of characters (table 4), and there are latin alphanumerics in both versions, the difference is mostly whether you get Japanese characters or the various European accented/other characters. So for English either version should be fine. 
+
+Looks like you were getting characters from the high half of the table rather than the low half that has English characters, so I'd look at checking what codes you're sending and wiring for the data lines. Would also be good to check if you are getting the corresponding character just with bit 7 being high rather than low or if it's a random other character.
+
+Robert
+________________________________________________________
+Robert McWilliam <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A> argh.technology
+
+What do you consider to be your median achievement?
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20190903/8c2b69d2/attachment.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20190903/8c2b69d2/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-September/003319.html">[57north-discuss] 16 x 2 LCD screen in Japenese font
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-September/003321.html">[57north-discuss] 16 x 2 LCD screen in Japenese font
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/date.html#3320">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/thread.html#3320">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/subject.html#3320">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-September/author.html#3320">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-September/003320.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:14:59 GMT -->
+</html>

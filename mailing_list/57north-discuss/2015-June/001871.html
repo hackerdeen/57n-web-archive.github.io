@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-June/001871.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:50 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Password store
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Password%20store&In-Reply-To=%3C20150617145455.GB15492%40eblueer-debian%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-June/001870.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-June/001872.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Password store</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Password%20store&In-Reply-To=%3C20150617145455.GB15492%40eblueer-debian%3E"
+       TITLE="[57north-discuss] Password store">rmcw at allmail.net
+       </A><BR>
+    <I>Wed Jun 17 15:54:58 BST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-June/001870.html">[57north-discuss] Tech Meetup Thursday 17th
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-June/001872.html">[57north-discuss] Space is open
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/date.html#1871">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/thread.html#1871">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/subject.html#1871">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/author.html#1871">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>We have been talking for a while about setting up something to store
+passwords for things somewhere that would be accessible to more than
+just the person looking after that thing. 
+
+I have a plan that I think works without too much hassle: I've set up
+a github repository to store a text file of passwords encrypted with
+each of the directors PGP keys, and a couple of scripts to
+encrypt/decrypt that [0]. 
+
+I was initially thinking to have the file stored on one of the space
+servers, but I think we want it under version control to catch
+collisions in people editing it. We could setup git ourselves but I
+think there is some value in this being hosted somewhere harder for us
+to accidentally break and there shouldn't be any risk from the
+repository being publicly readable. 
+
+Could folks have a look at this and check I've not made some stupid
+mistake and am actually leaking the plain text or using encryption
+that is trivially cracked (trivial here means using less than a few
+thousand pounds of computing time - if anyone is willing to put that
+kind of resources into accessing this they could offer me a couple of
+thousand pounds and there's a decent chance I'll give them the plain
+text). 
+
+I think it is possible to force a push to the repository that rewrites
+the history to actually delete everything, but it's convoluted so not
+something that's likely to be done by accident. The permissions to
+delete the repository on github are also given to the same group, but
+deleting the repository wouldn't be as bad as that wouldn't propagate
+to local copies on pull. Do we trust everyone with commit access to
+the hackerdeen github group not to maliciously delete this?
+
+    Robert
+
+[0] <A HREF="https://github.com/hackerdeen/passwords">https://github.com/hackerdeen/passwords</A>
+________________________________________________________
+Robert McWilliam     <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    www.ormiret.com
+
+He who laughs last thinks slowest.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 836 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20150617/772e7fb3/attachment.sig">http://lists.57north.co/pipermail/57north-discuss/attachments/20150617/772e7fb3/attachment.sig</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-June/001870.html">[57north-discuss] Tech Meetup Thursday 17th
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-June/001872.html">[57north-discuss] Space is open
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/date.html#1871">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/thread.html#1871">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/subject.html#1871">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-June/author.html#1871">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-June/001871.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:50 GMT -->
+</html>

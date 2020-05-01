@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-April/001745.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:52 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] IRC moderation
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20IRC%20moderation&In-Reply-To=%3C20150405122403.GA28746%40eblueer-debian%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-April/001746.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-April/001747.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] IRC moderation</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20IRC%20moderation&In-Reply-To=%3C20150405122403.GA28746%40eblueer-debian%3E"
+       TITLE="[57north-discuss] IRC moderation">rmcw at allmail.net
+       </A><BR>
+    <I>Sun Apr  5 13:24:04 BST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-April/001746.html">[57north-discuss] Member Application: Spadge
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-April/001747.html">[57north-discuss] IRC moderation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/date.html#1745">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/thread.html#1745">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/subject.html#1745">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/author.html#1745">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Yesterday Iain (I see we now have a second Iain - this was irl) banned
+hackerdeenbot from #57N.
+
+This pissed me off a lot but I decided to hold off complaining about
+it till I'd slept on it to see if I could still be bothered (again)
+trying to fight for what I want the space to be or if I should just
+take the hint and leave the rest of you to it...
+
+Good news! My obstreperousness has won out and you get the following
+rant.  
+
+I think[0] he was objecting to a feature of the bot where it will give
+a randomly filled in result from cards against hackspace (a variation
+on cards against humanity that's a subset of the main pack plus some
+hackspace related cards) if there has been no activity in the channel
+for some randomly selected period of time between 10 minutes and 5
+hours.
+
+I'd categorise the CAH output as often nonsensical, regularly
+offensive (sometimes spectacularly so) and occasionally funny. I think
+that description also applies to the content in #57N that comes from
+people.
+
+If anyone hasn't seen the CAH output in #57N: this has (finally)
+prompted me to put the code and lists up on github:
+github.com/ormiret/cards-against-hackspace
+
+You can get a feel for what is produced at idea.bodaegl.com/cah (you
+get a new result each time you visit the page).
+
+I added this feature to hackerdeenbot for a few reasons.
+
+Firstly, I find a decent chunk of the CAH output amusing and thought
+others might too.
+
+Secondly, I thought inserting this when the channel was quiet might
+stimulate discussion. This has happened a couple of times but most of
+the CAH outbursts have happened during the night when no one is paying
+attention to the channel (if hackerdeenbot is allowed back I might
+rethink the scheduling).
+
+Thirdly, I like that this output is achieved from a trivial
+algorithm. The processing selects from a list of statements with
+&lt;blank&gt;s in them and replaces each &lt;blank&gt; with a random selection
+from the list of answers. It coming up with things that make sense is
+a neat demonstration of the malleability of the English language. I
+really like the cases where the output is grammatically correct but
+doesn't make any sense and the inverse where it is technically wrong
+but there is clearly some meaning to it anyway (and how sometimes the
+mistakes look like the kind of mistakes people make).
+
+Fourthly, I like the &quot;offensive&quot; output for the questions it raises
+about the nature of offense (and because the things that can be
+offensive in some combinations can be hilarious in others). Is there a
+need for intent behind the statement, or can an algorithm be
+offensive? Even an algorithm as simple as randomly shuffling phrases?
+How much of the offense people find in the statements is from the
+combination the bot has come up with or are there topics that cause
+offense no matter what is said about them?
+
+I added this feature after reading something from the government about
+them wanting to police speech on the internet. My bot occasionally
+saying things that could have been covered by the proposed limits was
+my small protest in favour of free speech including the right to say
+things that people might find offensive. It amused me to consider
+someone trying to arrest hackerdeenbot. But we don't need to worry
+about the government placing limits on free speech as Iain is way out
+ahead of them.[1]
+
+Setting aside any of the reasoning for why I think it is OK for the
+bot to have this feature it's clear from the fact that I coded it up
+that I think it's acceptable and even desirable for the bot to do
+this. Iain banning the bot from the channel makes it clear he
+disagrees. I am really pissed off that he thinks unilaterally banning
+the bot is an appropriate way to deal with this disagreement.
+
+I get that community moderation is a Hard Problem, and hackerdeenbot
+may have stepped over the line of what we decide is acceptable.
+Pushing around that limit is part of the point of the feature.
+
+I strongly favour a light touch approach to moderation where whether
+or not something is acceptable is discussed and if there is consensus
+that a bot or person is over the line they are told that and allowed
+to change. Banning should be a last resort. I am *very* opposed to
+bans being handed out hypocritically[2] and arbitrarily[3] on the
+whims of individuals.
+
+TLDR: hackerdeenbot has been banned from #57N and I am not at all
+happy about it. I think hackerdeenbot's behaviour was
+acceptable, and pretty much normal for the channel. I see serious
+problems with the way this ban was imposed.
+
+      Robert
+
+[0] From context it looked like that was the trigger but Iain didn't
+actually give any explanation. 
+
+[1] Just to be clear: this is hyperbole. I don't actually think any of
+my or hackerdeenbot's rights have been trampled here - both I and the
+bot are still free to say what we like elsewhere. But the unilateral
+banning of disagreeable content is not how I want the space
+communication channels to be operated.
+
+[2] Iain's contributions to the channel are regularly offensive.
+
+[3] As are many others.
+
+________________________________________________________
+Robert McWilliam     <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    www.ormiret.com
+
+Cleverly disguised as a reponsible adult.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 836 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20150405/76f3be61/attachment.sig">http://lists.57north.co/pipermail/57north-discuss/attachments/20150405/76f3be61/attachment.sig</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-April/001746.html">[57north-discuss] Member Application: Spadge
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-April/001747.html">[57north-discuss] IRC moderation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/date.html#1745">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/thread.html#1745">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/subject.html#1745">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-April/author.html#1745">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-April/001745.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:52 GMT -->
+</html>

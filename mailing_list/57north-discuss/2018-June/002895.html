@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-June/002895.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:14 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Anyone know how email works?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Anyone%20know%20how%20email%20works%3F&In-Reply-To=%3CCAPY_hgfKeQo0DgjicX7AvqAvC4w%3D0AxfuDw9X9XPH3h7uBXvJA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-June/002894.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-June/002896.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Anyone know how email works?</H1>
+    <B>Edward Watson</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Anyone%20know%20how%20email%20works%3F&In-Reply-To=%3CCAPY_hgfKeQo0DgjicX7AvqAvC4w%3D0AxfuDw9X9XPH3h7uBXvJA%40mail.gmail.com%3E"
+       TITLE="[57north-discuss] Anyone know how email works?">mail at edwardwatson.co.uk
+       </A><BR>
+    <I>Wed Jun  6 09:50:22 BST 2018</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-June/002894.html">[57north-discuss] Anyone know how email works?
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-June/002896.html">[57north-discuss] Anyone know how email works?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/date.html#2895">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/thread.html#2895">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/subject.html#2895">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/author.html#2895">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 5 June 2018 at 23:51, Robert McWilliam &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>&gt; wrote:
+&gt;<i> Would anyone like to learn stuff to try and figure this out? I really don't want to do that so please someone else volunteer :)
+</I>
+Hi Rob
+
+I have an alias'ed gmail address via a google sites hosted domain and
+I receive fine. I have had a quick google into the cause but all I
+have so far come up with is maybe gmail's DMARC[1][2] policy. With
+many of the popular providers using a 'DMARC = reject' policy to
+prevent mail fraud, the 'FROM' address of a list email sent to
+<A HREF="http://lists.57north.co/listinfo/57north-discuss">you at popularprovidorA.com</A> from <A HREF="http://lists.57north.co/listinfo/57north-discuss">me at popularprovidorB.com</A> via mailman is
+seen to be lying since is actually came from the list.
+
+If this is the case, I think the way round this is to use &quot;FROM header
+munging&quot; in the mailman settings to rewrite the FROM header entry
+'<A HREF="http://lists.57north.co/listinfo/57north-discuss">me at popularprovidorB.com</A>' to
+'me=<A HREF="http://lists.57north.co/listinfo/57north-discuss">popularprovidorB.com at lists.57north.co</A>' which the receiving inbox
+will not reject outright. The reply-to header can be left intact.
+
+Changes to lists.57north.co's DNS records (over which DMARC works)
+might also cause it to break like this [3] - have we changed this
+recently?
+
+About all this I could o/c be completely wrong o/c - this *is* the
+result of a very quick search. I'll investigate further when I have
+more time.
+
+Cheers,
+Nordin
+
+[1] <A HREF="https://wiki.list.org/DEV/DMARC">https://wiki.list.org/DEV/DMARC</A>
+[2] <A HREF="https://news.ycombinator.com/item?id=13425802">https://news.ycombinator.com/item?id=13425802</A>
+[3] <A HREF="http://mailman.9.n7.nabble.com/Recent-trouble-with-DMARC-Munging-td45873.html">http://mailman.9.n7.nabble.com/Recent-trouble-with-DMARC-Munging-td45873.html</A>
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-June/002894.html">[57north-discuss] Anyone know how email works?
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-June/002896.html">[57north-discuss] Anyone know how email works?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/date.html#2895">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/thread.html#2895">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/subject.html#2895">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-June/author.html#2895">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-June/002895.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:14 GMT -->
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-July/001007.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:01 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Microcontroller for simulating a USB HID
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Microcontroller%20for%20simulating%20a%20USB%20HID&In-Reply-To=%3CCAHS2HcFNKS%2Br3cgZDrCYmBFn27%3D7vd5cgcSGqSRiNRzRw73JfA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001006.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001008.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Microcontroller for simulating a USB HID</H1>
+    <B>Calum Chisholm</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Microcontroller%20for%20simulating%20a%20USB%20HID&In-Reply-To=%3CCAHS2HcFNKS%2Br3cgZDrCYmBFn27%3D7vd5cgcSGqSRiNRzRw73JfA%40mail.gmail.com%3E"
+       TITLE="[57north-discuss] Microcontroller for simulating a USB HID">calum.chisholm at gmail.com
+       </A><BR>
+    <I>Thu Jul 24 16:46:34 UTC 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001006.html">[57north-discuss] Microcontroller for simulating a USB HID
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001008.html">[57north-discuss] Microcontroller for simulating a USB HID
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/date.html#1007">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/thread.html#1007">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/subject.html#1007">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/author.html#1007">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I hadn't come across v-usb until Tom mentioned it, but it certainly appears
+to be well supported. I think I'll probably try and get it running on a Uno
+(which I've already got), then scale it down to something more primitive
+once it's all working.
+
+I did look at the nano, but it apparently uses a special-purpose FTDI chip
+for USB [1], so can't act as a HID. Not sure if that's true for the v3 as
+well though - I haven't found a definitive answer online yet.
+
+I did fine this [2] though, which I think might be a good contender - it's
+based on the ATmega32U4 (the same as the Leonardo), and appears to be
+capable of HID [3].
+
+Will definitely chip in for a couple of Tinys if you're ordering some -
+thanks.
+
+Cheers,
+Calum
+
+[1] <A HREF="http://forum.arduino.cc/index.php/topic,233994.0.html">http://forum.arduino.cc/index.php/topic,233994.0.html</A>
+[2] <A HREF="http://proto-pic.co.uk/a-star-32u4-micro/">http://proto-pic.co.uk/a-star-32u4-micro/</A>
+[3] <A HREF="http://www.pololu.com/docs/0J61/6">http://www.pololu.com/docs/0J61/6</A>
+
+
+
+On 24 July 2014 17:15, Edward Watson &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">mail at edwardwatson.co.uk</A>&gt; wrote:
+
+&gt;<i> On 24 July 2014 15:07, Calum Chisholm &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">calum.chisholm at gmail.com</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> All,
+</I>&gt;&gt;<i> Can anyone suggest a suitable microcontroller for simulating a USB
+</I>&gt;&gt;<i> keyboard? Is the Teensy still the way to go for this, or is something like
+</I>&gt;&gt;<i> the Arduino Micro (or similar) a better option these days?
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> An Ardunio nano v3 might be a good choice if you want to actually make a
+</I>&gt;<i> full KB with caps lock reporting etc. Apparently V-USB can handle 12 MHz,
+</I>&gt;<i> 12.8 MHz, 15 MHz, 16 MHz, 16.5 MHz, 18 MHz and 20 MHz [1], but the clocks
+</I>&gt;<i> need to be precise. If you want to roll your sleeves up you could use a
+</I>&gt;<i> larger i/o attiny such as an 18pin Atiny88/861 [2] + your own SMD board
+</I>&gt;<i> design. You can always borrow a Nano and have a play with. Also I
+</I>&gt;<i> am ordering some Atiny88's for the PsionKB-to-Kindle3G interface, so can
+</I>&gt;<i> get you some also if you were interested.
+</I>&gt;<i>
+</I>&gt;<i> Cheers,
+</I>&gt;<i> Ed
+</I>&gt;<i>
+</I>&gt;<i> [1] <A HREF="http://vusb.wikidot.com/hardware">http://vusb.wikidot.com/hardware</A>
+</I>&gt;<i> [2]
+</I>&gt;<i> <A HREF="http://www.avrfreaks.net/index.php?name=PNphpBB2&amp;file=viewtopic&amp;p=1089525">http://www.avrfreaks.net/index.php?name=PNphpBB2&amp;file=viewtopic&amp;p=1089525</A>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20140724/5e8caf14/attachment.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20140724/5e8caf14/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001006.html">[57north-discuss] Microcontroller for simulating a USB HID
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001008.html">[57north-discuss] Microcontroller for simulating a USB HID
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/date.html#1007">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/thread.html#1007">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/subject.html#1007">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/author.html#1007">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-July/001007.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:01 GMT -->
+</html>

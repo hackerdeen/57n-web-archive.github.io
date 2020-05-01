@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-April/003201.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:04 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Space Network
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20Network&In-Reply-To=%3C12503c95-ec39-5dce-8faa-d3bb019e73e7%40fsfe.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003200.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003202.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Space Network</H1>
+    <B>Iain R. Learmonth</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20Network&In-Reply-To=%3C12503c95-ec39-5dce-8faa-d3bb019e73e7%40fsfe.org%3E"
+       TITLE="[57north-discuss] Space Network">irl at fsfe.org
+       </A><BR>
+    <I>Mon Apr 15 10:50:02 BST 2019</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003200.html">[57north-discuss] Reminder: 13th April 8pm: WeAreNameless - When Cyberpunk meets Nostalgia (in the social room)
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003202.html">[57north-discuss] Space Network
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/date.html#3201">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/thread.html#3201">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/subject.html#3201">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/author.html#3201">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi All,
+
+Our space network got lots of changes yesterday. There are still more
+changes planned. The primary change that you might notice is that the IP
+addresses we are using are changing (but not entirely yet).
+
+In the past we've used ChaosVPN for connecting to other hackerspaces.
+I'd like to switch us over to using dn42 for this purpose, which means
+renumbering. Some details are already up on the wiki here:
+
+  <A HREF="https://wiki.57north.org.uk/index.php/Projects:Network">https://wiki.57north.org.uk/index.php/Projects:Network</A>
+
+Once this is more stable, we can look at setting up tunnels with members
+if they wish to have a tunnel into the space. At first these will be
+plain GRE, but later looking to support IPsec/GRE.
+
+We are already in a position where we can look at setting up a tunnel
+between the space and finzean to allow doorbot to move off of Rob's VPN.
+I'll be co-ordinating with a director to get that set up as I don't have
+access to finzean.
+
+Both the EdgeRouter X and EdgeRouter Lite have been replaced by a single
+apu3c4 board running OpenBSD, which is set up pretty much exactly like
+my home router.
+
+  <A HREF="https://iain.learmonth.me/blog/2018/2018w431/">https://iain.learmonth.me/blog/2018/2018w431/</A>
+
+The exception is that it's not got its own GPS time source (yet) for the
+NTP server. Given its position we might need to get creative with that.
+
+I am going to look at lunchtime at fixing the DHCP static leases. Some
+things may need turned off and back on again to get the lease you're
+expecting. I'll cycle the switch ports to try to get things to do the
+right thing but that might not be enough.
+
+We currently do not have IPv6. I'm not sure if this worked before, but
+the tunnel set up as previously configured doesn't seem to work in the
+new setup. The tunnel may have been disabled if it was found to be
+broken for a while, and I don't have the access to check the admin panel
+for that.
+
+The space network has currently been taken back to 100Mbps Ethernet due
+to the need to support VLANs on our core switch and the rack being not
+deep enough for any of the Gigabit switches we have.
+
+This switch is probably what we want to put in there:
+
+
+<A HREF="https://www.amazon.co.uk/NETGEAR-GS724Tv4-24-Port-Lifetime-Protection/dp/B00GZNAHOA">https://www.amazon.co.uk/NETGEAR-GS724Tv4-24-Port-Lifetime-Protection/dp/B00GZNAHOA</A>
+
+It's a good balance of having a good set of features, Gigabit Ethernet,
+and price, while also being shallow enough to fit our rack. It has the
+added bonus of being fanless, so shouldn't track in dust from the dirty
+workshop area.
+
+Finally, I'll be in the space tonight testing and documenting the setup.
+If you have any questions, or want to get ahead in migrating to the new
+addressing, come along and talk to me.
+
+Thanks,
+Iain.
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 833 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20190415/67390839/attachment.sig">http://lists.57north.co/pipermail/57north-discuss/attachments/20190415/67390839/attachment.sig</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003200.html">[57north-discuss] Reminder: 13th April 8pm: WeAreNameless - When Cyberpunk meets Nostalgia (in the social room)
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-April/003202.html">[57north-discuss] Space Network
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/date.html#3201">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/thread.html#3201">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/subject.html#3201">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-April/author.html#3201">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-April/003201.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:04 GMT -->
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-February/002809.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:18 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Fwd%3A%20Your%20BitFolk%20VPSes%20%28%22finzean%22%2C%0A%20%22garioch%22%29%20need%20to%20be%20rebooted%20for%20critical%20maintenance&In-Reply-To=%3C1518963495.2520363.1274774376.5467B199%40webmail.messagingengine.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-February/002808.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-February/002810.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Fwd%3A%20Your%20BitFolk%20VPSes%20%28%22finzean%22%2C%0A%20%22garioch%22%29%20need%20to%20be%20rebooted%20for%20critical%20maintenance&In-Reply-To=%3C1518963495.2520363.1274774376.5467B199%40webmail.messagingengine.com%3E"
+       TITLE="[57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance">rmcw at allmail.net
+       </A><BR>
+    <I>Sun Feb 18 14:18:15 GMT 2018</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-February/002808.html">[57north-discuss] Phillips Hue Bridge
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-February/002810.html">[57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/date.html#2809">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/thread.html#2809">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/subject.html#2809">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/author.html#2809">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>finzean and garioch will be rebooted in the early hours of the 22nd. 
+
+Everything should come back up, but if you notice anything not working after that (or at any other time): say so here and someone will have a look at it.
+
+Robert
+
+----- Original message -----
+From: <A HREF="http://lists.57north.co/listinfo/57north-discuss">andy at bitfolk.com</A>
+To: Robert McWilliam &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>&gt;
+Subject: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance
+Date: Sun, 18 Feb 2018 08:09:57 +0000
+
+Dear customer,
+
+As part of our plans to protect ourselves and all of our customers
+against the Meltdown and Spectre security vulnerabilities, we need to
+apply security patches to our hypervisor and reboot everything to put
+them into service.
+
+You do not need to respond to this email unless you have questions about
+the process.
+
+We must apply these fixes to ensure the security and reliability both
+of your VPSes and of our infrastructure. Normally with security
+issues there is an embargo period, and we try to give as much notice
+as possible. In this case however the embargo broke early and
+development continued well after the issues became public. We now
+think we're in a good position to provide some mitigation so we must
+do so as soon as reasonably possible, so this work will be taking
+place in less than a week.
+
+Your VPSes have been assigned a maintenance window during which the
+reboots will take place. The start of the maintenance window for each of
+your VPSes is listed below, in UTC time zone. Each maintenance window is
+up to 60 minutes long, though the work should be completed much sooner
+than this, typically within a few minutes (yay, SSDs!).
+
++-----------------+---------------+--------------------+
+|<i> Name            | Main IPv4     | Window start (UTC) |
+</I>+-----------------+---------------+--------------------+
+|<i>         finzean | 85.119.82.172 | 2018-02-22 01:00   |
+</I>|<i>         garioch | 85.119.84.59  | 2018-02-22 02:00   |
+</I>+-----------------+---------------+--------------------+
+
+At some point in each maintenance window your VPS will be cleanly shut
+down. The host it is on will then be patched and rebooted, and then your
+VPS will be brought up again.
+
+You should ensure that your VPS and all its services start up correctly
+on boot. We offer a free Nagios monitoring service which can help you to
+know if your VPS and its services are working correctly. If you have not
+done so already then you may want to get in touch with us to have this
+set up. You can do that by replying to this email and describing which
+services you would like monitored.
+
+Unfortunately we cannot offer a suspend and restore this time as we are
+also upgrading the release of the hypervisor; it is not possible to save
+from one version then restore into another. All VPSes will be cleanly
+shut down (if possible) and booted again.
+
+If you have any questions please reply to this email, which will open a
+support ticket. Please note however that we cannot change the date or
+time of the planned maintenance. There is no need to reply to this email
+unless you have further questions, or wish to request Nagios monitoring.
+
+Best regards,
+Andy Smith
+BitFolk Ltd
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-February/002808.html">[57north-discuss] Phillips Hue Bridge
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-February/002810.html">[57north-discuss] Fwd: Your BitFolk VPSes (&quot;finzean&quot;, &quot;garioch&quot;) need to be rebooted for critical maintenance
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/date.html#2809">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/thread.html#2809">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/subject.html#2809">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-February/author.html#2809">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-February/002809.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:18 GMT -->
+</html>

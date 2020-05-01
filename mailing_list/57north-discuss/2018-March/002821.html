@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-March/002821.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:17 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] [57north-announce] 2018-03-13 Grey Open Tueday
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20%5B57north-announce%5D%202018-03-13%20Grey%20Open%20Tueday&In-Reply-To=%3C1520938675.2468243.1301262672.54AD5906%40webmail.messagingengine.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-March/002820.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2018-March/002822.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] [57north-announce] 2018-03-13 Grey Open Tueday</H1>
+    <B>Hibby</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20%5B57north-announce%5D%202018-03-13%20Grey%20Open%20Tueday&In-Reply-To=%3C1520938675.2468243.1301262672.54AD5906%40webmail.messagingengine.com%3E"
+       TITLE="[57north-discuss] [57north-announce] 2018-03-13 Grey Open Tueday">d at vehibberd.com
+       </A><BR>
+    <I>Tue Mar 13 10:57:55 GMT 2018</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-March/002820.html">[57north-discuss] [57north-announce] 2018-03-13 Grey Open Tueday
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-March/002822.html">[57north-discuss] [57north-announce] 2018-03-13 Grey Open Tueday
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/date.html#2821">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/thread.html#2821">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/subject.html#2821">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/author.html#2821">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> Could you share how you gpg'd up your yubikey?
+</I>&gt;<i> 
+</I>&gt;<i> - [tj]
+</I>
+Aye. Other people may want context:
+
+I have moved my Debian signing GPG key to a yubikey for portability and convenience.  Because I have an 'Authentication key' in place, I can use my yubikey as a travelling SSH authenticator too - I can use the device to ssh to my build server, build Debian packages and sign them on my local machine using the signing key stored on the yubikey.
+
+Useful reading is:
+
+<A HREF="https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/">https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/</A>
+<A HREF="https://github.com/drduh/YubiKey-Guide">https://github.com/drduh/YubiKey-Guide</A>
+<A HREF="https://www.yubico.com/support/knowledge-base/categories/articles/use-yubikey-openpgp/">https://www.yubico.com/support/knowledge-base/categories/articles/use-yubikey-openpgp/</A>
+<A HREF="https://wiki.debian.org/Smartcards/YubiKey4#OpenPGP">https://wiki.debian.org/Smartcards/YubiKey4#OpenPGP</A>
+
+I leaned on the DrDuh, ESEV, and Debian links most.
+
+Important things I did/lessons learned: 
+
+Backed up my entire .gnupg directory before I started. I have that buried away somewhere secure in case this all turns out to be a catastrophically shit idea. 
+
+I have recorded my admin pin and user pin in my password store using a different GPG key for encryption. 
+
+If you want to use the SSH Authentication feature, ensure you have the correct subkeys. As far as I can tell, the Yubikey has 3 slots for keys. 1x Master, 2x Subkeys to fulfill the following roles:
+  * Signature
+  * Encryption
+  * Authentication
+
+If you haven't already, generate keys following*: <A HREF="https://github.com/drduh/YubiKey-Guide#create-subkeys">https://github.com/drduh/YubiKey-Guide#create-subkeys</A>
+There is ongoing anxiety regarding the security of cryptographic generation of numbers on yubikeys, so probably do this on your PC. Also, keys generated on yubikeys are hard (impossible?) to get off. You want to keep your life portable. 
+
+Act with caution following the guide here - I have not (yet) published the Authentication key on keyservers as I'm not sure how the gnupg-agent generates the ssh key. I want to read up on that /before/ I potentially give folks easy access to my private bits.
+
+Configure the yubikey, then smartcard settings: <A HREF="https://github.com/drduh/YubiKey-Guide#configure-yubikey">https://github.com/drduh/YubiKey-Guide#configure-yubikey</A>
+
+In the 'configure smartcard' section of Drduh guide, <A HREF="https://github.com/drduh/YubiKey-Guide#configure-smartcard,">https://github.com/drduh/YubiKey-Guide#configure-smartcard,</A> I didn't notice it was the admin pin I was setting first, and had to fanny about with unblocking and resetting pins. Don't do this. Read and consider what you are doing to minimise time wasted. Use a unique pin, for each and it must be at least 8 numbers long. 
+The admin pin allows for control over the device configuration. 
+The user pin provides 2FA (the button on the device must be pressed /and/ the pin must be entered). 
+
+I transferrred the keys using key2card as mentioned in the drduh guide: <A HREF="https://github.com/drduh/YubiKey-Guide#transfer-keys">https://github.com/drduh/YubiKey-Guide#transfer-keys</A>
+
+For SSH authentication, by default the yubikey will not wait for you to touch it to authenticate. I dislike this as it means any rogue program/user can use it to authenticate with $server in my terminal history.
+To require touch input for each approval, I used this script: <A HREF="https://github.com/a-dma/yubitouch">https://github.com/a-dma/yubitouch</A>
+But if you have the yubikey manager installed, follow <A HREF="https://github.com/drduh/YubiKey-Guide#requiring-touch-to-authenticate">https://github.com/drduh/YubiKey-Guide#requiring-touch-to-authenticate</A>
+
+It takes a little while to recognise the flashes the yubikey is doing - sometimes I don't realise till after the operation has failed it actually wanted my input. Keep an eye on it and learn to understand the &quot;I'm busy being edited&quot; blink and the &quot;I want you to touch me&quot; blink
+
+-- 
+  Hibby
+  <A HREF="http://lists.57north.co/listinfo/57north-discuss">d at vehibberd.com</A>
+  MM3ZRZ
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-March/002820.html">[57north-discuss] [57north-announce] 2018-03-13 Grey Open Tueday
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2018-March/002822.html">[57north-discuss] [57north-announce] 2018-03-13 Grey Open Tueday
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/date.html#2821">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/thread.html#2821">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/subject.html#2821">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2018-March/author.html#2821">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2018-March/002821.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:17 GMT -->
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-July/001035.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:01 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Microcontroller for simulating a USB HID
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Microcontroller%20for%20simulating%20a%20USB%20HID&In-Reply-To=%3C70ff1646945cdbd2df9687c762ca1921%40clixx.io%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001022.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001009.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Microcontroller for simulating a USB HID</H1>
+    <B>David Lyon</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Microcontroller%20for%20simulating%20a%20USB%20HID&In-Reply-To=%3C70ff1646945cdbd2df9687c762ca1921%40clixx.io%3E"
+       TITLE="[57north-discuss] Microcontroller for simulating a USB HID">david.lyon at clixx.io
+       </A><BR>
+    <I>Tue Jul 29 21:46:14 UTC 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001022.html">[57north-discuss] Microcontroller for simulating a USB HID
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001009.html">[57north-discuss] 3D printer
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/date.html#1035">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/thread.html#1035">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/subject.html#1035">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/author.html#1035">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 2014-07-28 19:52, Calum Chisholm wrote:
+&gt;<i> Hi David,
+</I>&gt;<i> I'm wiring up the keyboard form an old 8-bit machine (a Russian clone
+</I>&gt;<i> of the zx spectrum [1]), which uses an 8x5 keyboard matrix [2]. My
+</I>&gt;<i> intention is to be able to connect it to a Raspberry Pi running a
+</I>&gt;<i> variety of old-school emulators, as well as using it with the original
+</I>&gt;<i> hardware if I'm ever able to resurrect it.
+</I>&gt;<i> 
+</I>&gt;<i> If I have any input pins left over, I might also add an Atari d-type
+</I>&gt;<i> connector for a digital joystick.
+</I>
+Oh that's interesting.
+
+btw if you wanted to omit the v-usb you could. Linux will accept serial 
+tty keyboards although these days there are a few hacks / 
+configuration-changes. I've seen a few blogs postings about doing this 
+on the Raspberry-Pi. That is, using the serial port, /dev/ttyACMO as the 
+main keyboard port.
+
+Also, from my understanding, keyboard interfaces are much more low tech 
+than most people appreciate. If you can output key scan-codes in PS/2 
+format, you can then use a low-cost PS2&gt;USB keyboard adaptor to get you 
+the last inch.
+
+But by all means try V-USB.
+
+Regards
+
+David
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001022.html">[57north-discuss] Microcontroller for simulating a USB HID
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-July/001009.html">[57north-discuss] 3D printer
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/date.html#1035">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/thread.html#1035">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/subject.html#1035">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-July/author.html#1035">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-July/001035.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:01 GMT -->
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2016-March/002256.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:41 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] video wall project
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20video%20wall%20project&In-Reply-To=%3C1458001852.220682.549227034.211307A0%40webmail.messagingengine.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2016-March/002255.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2016-March/002257.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] video wall project</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20video%20wall%20project&In-Reply-To=%3C1458001852.220682.549227034.211307A0%40webmail.messagingengine.com%3E"
+       TITLE="[57north-discuss] video wall project">rmcw at allmail.net
+       </A><BR>
+    <I>Tue Mar 15 00:30:52 GMT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2016-March/002255.html">[57north-discuss] [57north-announce] New space options (not terrible at all - disregard old one pls)
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2016-March/002257.html">[57north-discuss] video wall project
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/date.html#2256">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/thread.html#2256">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/subject.html#2256">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/author.html#2256">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Some of us had discussed making a video wall thing for the Edinburgh
+mini maker faire. This should be an FPGA driving (up to) 9 VGA displays
+and being fed images via USB.
+
+The faire is coming up fast (less than a month away!) and I am nothing
+like as far along with making this work as I would like. To avoid
+failing miserably to get anything working (again) I could do with some
+help.
+
+Tom has already volunteered to do the physical construction of the
+shield thing to connect VGA ports to pins.
+
+The rest of the work splits up into writing the firmware for the FPGA,
+and the software to feed it images. If I could get someone else to take
+care of the SW side it would help the chances of this working (and my
+sanity) greatly. Also if anyone want's to pick up the FPGA side I am
+more than happy to do nothing :)
+
+My plan for the software was to have something read in image files,
+scale them to the right resolution (I think 800x600, remind me to check
+before you start coding against that), reduce the colour to 3 bits (one
+each for red, green and blue) and then send that down to the FPGA (if I
+do get a volunteer, I'll document how that happens). I had vague plans
+for a web interface to that (and did think about making it publicly
+accessible - it would probably be best to have a moderation feature to
+approve things before they go on the screens if we do implement that). I
+was thinking to write it in python as I know the PIL can handle the
+image parts quite easily, but if someone has a different preference I
+don't particularly care.
+
+Can I rope anyone in to help with this?
+
+Robert
+--
+Robert McWilliam      <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    www.ormiret.com
+
+Cleverly disguised as a responsible adult.
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2016-March/002255.html">[57north-discuss] [57north-announce] New space options (not terrible at all - disregard old one pls)
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2016-March/002257.html">[57north-discuss] video wall project
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/date.html#2256">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/thread.html#2256">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/subject.html#2256">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2016-March/author.html#2256">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2016-March/002256.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:41 GMT -->
+</html>

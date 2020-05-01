@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001566.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] SSH access to doorbot + hosting stuff in the	space
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20SSH%20access%20to%20doorbot%20%2B%20hosting%20stuff%20in%20the%0A%09space&In-Reply-To=%3C3FD6300E-7B38-4F95-B4CF-0B5FEB35ADDE%40ajf.me%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001565.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001567.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] SSH access to doorbot + hosting stuff in the	space</H1>
+    <B>Andrea Faulds</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20SSH%20access%20to%20doorbot%20%2B%20hosting%20stuff%20in%20the%0A%09space&In-Reply-To=%3C3FD6300E-7B38-4F95-B4CF-0B5FEB35ADDE%40ajf.me%3E"
+       TITLE="[57north-discuss] SSH access to doorbot + hosting stuff in the	space">ajf at ajf.me
+       </A><BR>
+    <I>Sat Jan 17 20:47:41 UTC 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001565.html">[57north-discuss] SSH access to doorbot + hosting stuff in the space
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001567.html">[57north-discuss] SSH access to doorbot + hosting stuff in the	space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1566">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1566">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1566">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1566">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hey Robert,
+
+&gt;<i> On 17 Jan 2015, at 19:33, Robert McWilliam &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> On Wed, Jan 14, 2015 at 08:40:23AM +0000, Andrea Faulds wrote:
+</I>&gt;&gt;<i> I don&#8217;t think allowing access to doorbot is bad, allowing *sudo*
+</I>&gt;&gt;<i> access is. If it weren&#8217;t for sudo access, I wouldn&#8217;t have been able
+</I>&gt;&gt;<i> to do `sudo killall sshd`. (Again, I&#8217;m really sorry about that.)
+</I>&gt;&gt;<i> 
+</I>&gt;<i> &lt;snip&gt;
+</I>&gt;&gt;<i> One option would just be to run all the toys in a VM on doorbot and
+</I>&gt;&gt;<i> give people access to the VM. It&#8217;d be slow, sure, but none of this
+</I>&gt;&gt;<i> stuff really needs to be ultra-fast, and if someone screws up, only
+</I>&gt;&gt;<i> the toys are lost.
+</I>&gt;<i> 
+</I>&gt;<i> Sorry for the slow response, I'm slowly catching up on emails...
+</I>&gt;<i> 
+</I>&gt;<i> There is a lot you can do to mess up a machine without root
+</I>&gt;<i> privileges if you can run arbitrary code. 
+</I>
+That is true. Fill up the disk and you can break virtually everything&#8230; I&#8217;ve done it to myself before.
+
+&gt;<i> VMs are a nice way to keep things in a properly managed jail but I
+</I>&gt;<i> haven't seen any VM tech that would have an easy way to give access to
+</I>&gt;<i> hardware (usually USB devices for what we've been using up to now)
+</I>&gt;<i> without giving access to all the devices which could let you break
+</I>&gt;<i> (current) doorbot.
+</I>
+VirtualBox allows USB passthrough for selected devices, could that work? Maybe you could blacklist certain specific things.
+
+&gt;<i> Basically, setting up stuff so that we can have &quot;playing&quot; on doorbot with
+</I>&gt;<i> any confidence that such playing can't break door access is more faff
+</I>&gt;<i> than I can be bothered with. I'd rather just use another machine that
+</I>&gt;<i> we're not relying on for playing. If someone else has a sane plan to
+</I>&gt;<i> set up jails of some description on doorbot and really wants to do
+</I>&gt;<i> that I could probably be convinced to give you access to do it.   
+</I>
+I probably don&#8217;t have the motivation, and you&#8217;d never trust me after I started this debacle (with the best of intentions, mind you!).
+
+I have an RPi sitting around, unloved. It could be donated (possibly with some limited strings) to the space as a thing to put toys on.
+
+Thoughts?
+--
+Andrea Faulds
+<A HREF="http://ajf.me/">http://ajf.me/</A>
+
+
+
+
+</PRE>
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001565.html">[57north-discuss] SSH access to doorbot + hosting stuff in the space
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001567.html">[57north-discuss] SSH access to doorbot + hosting stuff in the	space
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1566">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1566">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1566">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1566">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001566.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+</html>

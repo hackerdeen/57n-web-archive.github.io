@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-January/003080.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:07 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Laser
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Laser&In-Reply-To=%3C1547601610.1301417.1635711664.6E70FC97%40webmail.messagingengine.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-January/003077.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-January/003081.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Laser</H1>
+    <B>Robert McWilliam</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Laser&In-Reply-To=%3C1547601610.1301417.1635711664.6E70FC97%40webmail.messagingengine.com%3E"
+       TITLE="[57north-discuss] Laser">rmcw at allmail.net
+       </A><BR>
+    <I>Wed Jan 16 01:20:10 GMT 2019</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-January/003077.html">[57north-discuss] vulca.eu UK Tour.
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-January/003081.html">[57north-discuss] Laser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/date.html#3080">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/thread.html#3080">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/subject.html#3080">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/author.html#3080">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>We now have a laser cutter on loan to the space from Peter (and its other owner(s)).  
+
+For getting it running there are a few things we need to look at.
+
+* Have a play at moving the head * 
+Could work on getting control of the head without switching on the laser - so could be independent of the other &quot;required&quot; tasks before the laser can be switched on. 
+
+There was a CD with software (Corel laser?) with it originally but I don't  think that is still with it. We do have the USB dongle required to make it work. Anyone able to find the software? And have a windows machine that it will run on?
+
+As for alternative software: I think the existing board speaks g-code of some description. Could have a go at getting it working with some open source tool chain?
+
+* Ventilation *
+Need to hook up fan to extract fumes and vent them out of the space.
+
+Could probably do with adding some filtration to capture some of the noxious/carcinogous fumes rather than just venting them into the street.
+
+* Cooling *
+For short tests just filling the bath and hooking up the pump will be enough. 
+
+I'd be a lot happier if we added some cooling of the water in the reservoir and temp monitoring of the water coming out of the laser tube to make sure it doesn't get too high.
+ 
+* fire extinguishers *
+The space currently has 1 x 2kg CO2 extinguisher and 1 x 1kg powder extinguisher (I think...). 
+
+I think the CO2 one is fine for putting next to the laser cutter in case the fire inside it gets a bit too much, and might be at risk of getting outside it. But it has been sitting for a few years now (a quick search through my email suggests we're coming up on 5 years) so we might want to get a fresh one? Or get it checked?
+
+* E-stop *
+Do we want an e-stop button in the power line to kill the laser in a hurry if it get's out of control? I'm inclined towards yes. 
+
+* Interlocks *
+Do we want to add interlock to keep the laser off when the case is open? I'm mostly of the opinion that people not being idiots should be sufficient, but I'm not sure how much we can rely on people not being idiots...
+
+* New mirrors *
+Existing mirrors are reportedly a bit dirty. 
+
+We probably don't want to change them until after we've done a bit of playing to make sure we know what we're doing with it while it is in alignment. 
+
+* Consumables *
+Some bits of the laser cutter will wear out and need replaced eventually; notably the tube, lens and mirrors, honeycomb for the bed, filters (if we add any), fire extinguisher, and probably some other stuff I'm forgetting. How do we want to cover that cost? 
+
+Need to think about both being able to cover the cost of replacement when they wear out and what we need to do for if/when the owners want the laser back. For the latter case the &quot;easy to account for&quot; way would be to get a full set of new consumables now and then the existing ones can go back in if/when the laser is going away, but that would need a decent amount of money now: tube is about £100 on eBay [1].
+
+For consumables it is probably worth considering Smoke and Mirrors (<A HREF="https://smokeandmirrors.store/">https://smokeandmirrors.store/</A>). They're a bit more expensive than eBay options but possibly/probably more reliably decent quality parts. 
+
+* Replacement control board *
+There are a few drop in replacement control boards that would give a complete open source tool chain for us to mess with. 
+
+I've done a bit of looking around for them and am leaning towards a Pro pack super gerbil: <A HREF="https://awesome.tech/buy-gerbil/">https://awesome.tech/buy-gerbil/</A> Anyone else have other preferences? Or think we can live with the existing board?
+
+* Other *
+
+What have I forgotten?
+
+    Robert
+
+[1] Though for about the same money (and a little bit of work with a hacksaw to make a hole in the case for it to stick out of) we could go up to a 60W (or more?) tube :D
+
+________________________________________________________
+Robert McWilliam     <A HREF="http://lists.57north.co/listinfo/57north-discuss">rmcw at allmail.net</A>    argh.technology
+
+Long periods of drought are always followed by rain.
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-January/003077.html">[57north-discuss] vulca.eu UK Tour.
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-January/003081.html">[57north-discuss] Laser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/date.html#3080">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/thread.html#3080">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/subject.html#3080">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-January/author.html#3080">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-January/003080.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:07 GMT -->
+</html>

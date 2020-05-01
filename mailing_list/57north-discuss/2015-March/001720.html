@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-March/001720.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:53 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] 57North OpenStack private cloud
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%2057North%20OpenStack%20private%20cloud&In-Reply-To=%3C550DA7D2.3070205%40minke-informatics.co.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-March/001719.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-March/001721.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] 57North OpenStack private cloud</H1>
+    <B>Tony Travis</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%2057North%20OpenStack%20private%20cloud&In-Reply-To=%3C550DA7D2.3070205%40minke-informatics.co.uk%3E"
+       TITLE="[57north-discuss] 57North OpenStack private cloud">tony.travis at minke-informatics.co.uk
+       </A><BR>
+    <I>Sat Mar 21 17:18:10 GMT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-March/001719.html">[57north-discuss] Shopping-hacking
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-March/001721.html">[57north-discuss] 57North OpenStack private cloud
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/date.html#1720">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/thread.html#1720">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/subject.html#1720">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/author.html#1720">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Iain has connected my server 172.31.1.114 &quot;minke&quot; to ChaosVPN and I've
+installed &quot;DevStack&quot; on it, which is a single-node version of OpenStack
+for developers. We still have to sort out 'floating' IP ranges for it,
+but I've loaded and run a Fedora VM instance. Just can't login on it!
+
+Lots of details about how to do things at:
+
+&gt;<i> <A HREF="http://docs.openstack.org/developer/devstack/guides/single-machine.html">http://docs.openstack.org/developer/devstack/guides/single-machine.html</A>
+</I>
+It's not a 'production' server - It's for us to learn about OpenStack,
+but we can actually use it to run Virtual Machine Images and do things
+with them. The DevStack 'Dashboard' for &quot;minke&quot; is at:
+
+  <A HREF="http://172.31.1.114/">http://172.31.1.114</A>
+
+I've changed the default admin password because the system is exposed to
+ChaosVPN and, for the moment, me and Iain will administer &quot;minke&quot;.
+
+I'd like to use our 57North LDAP authentication, but I'm not sure how to
+integrate that with DevStack or if it can be done. meanwhile, let me or
+Iain know if you want a DevStack user account and we'll create one
+locally on &quot;minke&quot;.
+
+Minke is a Tyan S8230 with dual 8-core Opteron 6128's and 128GiB RAM.
+
+It has <A HREF="http://lists.57north.co/listinfo/57north-discuss">10 at SATA2</A> disks, currently <A HREF="http://lists.57north.co/listinfo/57north-discuss">2 at 2TB</A> + <A HREF="http://lists.57north.co/listinfo/57north-discuss">8 at 1TB</A> but I'm still fiddling
+about with the disk layout to get the best &quot;DevStack&quot; performance.
+
+Bye,
+
+  Tony.
+
+-- 
+Minke Informatics Limited, Registered in Scotland - Company No. SC419028
+Registered Office: 3 Donview, Bridge of Alford, AB33 8QJ, Scotland (UK)
+tel. +44(0)19755 63548                    <A HREF="http://minke-informatics.co.uk/">http://minke-informatics.co.uk</A>
+mob. +44(0)7985 078324        mailto:<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony.travis at minke-informatics.co.uk</A>
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-March/001719.html">[57north-discuss] Shopping-hacking
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-March/001721.html">[57north-discuss] 57North OpenStack private cloud
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/date.html#1720">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/thread.html#1720">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/subject.html#1720">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-March/author.html#1720">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-March/001720.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:53 GMT -->
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2017-August/002702.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:24 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Atmospheric Sampling
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Atmospheric%20Sampling&In-Reply-To=%3CVI1P190MB01432F4C7A958FA54A837852A9850%40VI1P190MB0143.EURP190.PROD.OUTLOOK.COM%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2017-August/002701.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2017-August/002703.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Atmospheric Sampling</H1>
+    <B>Mike O'Hagan</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Atmospheric%20Sampling&In-Reply-To=%3CVI1P190MB01432F4C7A958FA54A837852A9850%40VI1P190MB0143.EURP190.PROD.OUTLOOK.COM%3E"
+       TITLE="[57north-discuss] Atmospheric Sampling">bmikeohagan at hotmail.com
+       </A><BR>
+    <I>Wed Aug 23 16:07:23 BST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-August/002701.html">[57north-discuss] [57north-announce] Open Tuesday 20170822T1800Z
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-August/002703.html">[57north-discuss] [57north-announce] Friday Space,	2017-08-25 edition
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/date.html#2702">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/thread.html#2702">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/subject.html#2702">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/author.html#2702">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+At last night's Tuesday meet up a chap came along looking for help with an atmospheric monitoring project.
+Doc O talked to him about helping with his project and got contact information.
+The chap was worried about the possible fall out from the incinerator planned for Torry.
+
+I have been looking up some of the technical stuff he mentioned and thought I might share what I found out with you....
+
+Hackaday article = hackaday.com/2017/04/08/getting-a-measure-on-particulates-in-stuttgart/
+....which has a link to the Google translated....
+Stuttgart University project web page = <A HREF="http://luftdaten.info/feinstaubsensor-bauen/">http://luftdaten.info/feinstaubsensor-bauen/</A>
+
+The project involves building monitors consisting of:-
+
+Sensor = SDS011
+&gt;<i> senses atmospheric particle concentrations using laser scattering
+</I>&gt;<i> data sheet  = SDS011_laser_PM2.5_sensor-specification-V1.3.pdf
+</I>&gt;<i> includes a small fan to suck in samples
+</I>&gt;<i>??outputs concentration of particles 2.5 and 10 micron as serial data??
+</I>&gt;<i> available at Aliexpress.com 2pc for £27.88 or 10 pc for £136.23
+</I>
+WiFi + CPU module = NodeMCU ESP8266, CPU WLAN
+&gt;<i> data sheet  = <A HREF="https://cdn-shop.adafruit.com/datasheets/ESP8266_Specifications_English.pdf">https://cdn-shop.adafruit.com/datasheets/ESP8266_Specifications_English.pdf</A>
+</I>&gt;<i> firmware from Stuttgart University
+</I>&gt;<i> transmits data to Stuttgart University via WiFi and web connection - ?data can be recovered from their web site?
+</I>&gt;<i> available from lots of suppliers for about £2 each
+</I>
+Battery ?? - I've not seen a power source in the documents so far - may have to read more carefully.
+
+Weatherproof Housing = 2 x 75mm push fit waste pipe M-F elbows
+&gt;<i> I don't think we have that size in the UK
+</I>
+Other stuff...
+&gt;<i> a WiFi module needs an accessible router/tethered phone/etc nearby
+</I>&gt;<i> there are Arduino libraries for the sensor - might log to SD card? - could make a mobile unit??
+</I>(could pick up the data using a WiFi SD card?)
+&gt;<i> would someone in Aberdeen be interested in hosting the data instead of Stuttgart??
+</I>
+See you next week,
+
+Mike.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20170823/f9c2064b/attachment.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20170823/f9c2064b/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-August/002701.html">[57north-discuss] [57north-announce] Open Tuesday 20170822T1800Z
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2017-August/002703.html">[57north-discuss] [57north-announce] Friday Space,	2017-08-25 edition
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/date.html#2702">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/thread.html#2702">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/subject.html#2702">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2017-August/author.html#2702">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2017-August/002702.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:24 GMT -->
+</html>

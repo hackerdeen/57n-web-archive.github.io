@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-June/000845.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:02 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Harbinger of doom?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Harbinger%20of%20doom%3F&In-Reply-To=%3C53983E58.7010203%40minke-informatics.co.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000844.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000846.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Harbinger of doom?</H1>
+    <B>Tony Travis</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Harbinger%20of%20doom%3F&In-Reply-To=%3C53983E58.7010203%40minke-informatics.co.uk%3E"
+       TITLE="[57north-discuss] Harbinger of doom?">tony.travis at minke-informatics.co.uk
+       </A><BR>
+    <I>Wed Jun 11 11:32:40 UTC 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000844.html">[57north-discuss] Theme Thursday suggestions?
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000846.html">[57north-discuss] CRC's
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/date.html#845">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/thread.html#845">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/subject.html#845">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/author.html#845">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Rob was explaining to me why hard disks can't be trusted last night and,
+although I disagreed with him about it, I do think he has a point and it
+got me thinking a bit more deeply about the issue...
+
+One thing we disagreed about was the extent to which the manufacturer's
+UER (Unrecoverable Error Rate) spec. of a SATA drive can be used to
+estimate how often you are likely to lose data from it. I found this
+paper about the issue:
+
+  Empirical Measurements of Disk Failure Rates and Error Rates
+  <A HREF="http://arxiv.org/abs/cs/0701166">http://arxiv.org/abs/cs/0701166</A>
+
+It's quite old now (2005) but I found it an interesting read:
+
+Abstract:
+
+The SATA advertised bit error rate of one error in 10 terabytes is
+frightening. We moved 2 PB through low-cost hardware and saw five disk
+read error events, several controller failures, and many system reboots
+caused by security patches. We conclude that SATA uncorrectable read
+errors are not yet a dominant system-fault source &#8211; they happen, but are
+rare compared to other problems. We also conclude that UER
+(uncorrectable error rate) is not the relevant metric for our needs.
+When an uncorrectable read error happens, there are typically several
+damaged storage blocks (and many uncorrectable read errors.) Also, some
+uncorrectable read errors may be masked by the operating system. The
+more meaningful metric for data architects is Mean Time To Data Loss
+(MTTDL.)
+
+I'd like to get a realistic idea of how worried we should be about Rob's
+pronouncements and I wonder if anyone else in the Hackspace might be
+interested in doing some empirical experiments to support or refute our
+Harbinger of doom?
+
+Thanks for an interesting discussion Rob - I was listening :-)
+
+  Tony.
+
+-- 
+Minke Informatics Limited, Registered in Scotland - Company No. SC419028
+Registered Office: 3 Donview, Bridge of Alford AB33 8QJ, Scotland (UK)
+tel. +44(0)19755 63548                    <A HREF="http://minke-informatics.co.uk/">http://minke-informatics.co.uk</A>
+mob. +44(0)7985 078324        mailto:<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony.travis at minke-informatics.co.uk</A>
+
+</PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000844.html">[57north-discuss] Theme Thursday suggestions?
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2014-June/000846.html">[57north-discuss] CRC's
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/date.html#845">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/thread.html#845">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/subject.html#845">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2014-June/author.html#845">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2014-June/000845.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:16:02 GMT -->
+</html>

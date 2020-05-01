@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001531.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] New Semantic MediaWiki for 57North
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20New%20Semantic%20MediaWiki%20for%2057North&In-Reply-To=%3C20150113105037.GD27206%40beta.hibby.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001529.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001533.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] New Semantic MediaWiki for 57North</H1>
+    <B>Dave Hibberd</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20New%20Semantic%20MediaWiki%20for%2057North&In-Reply-To=%3C20150113105037.GD27206%40beta.hibby.info%3E"
+       TITLE="[57north-discuss] New Semantic MediaWiki for 57North">d at vehibberd.com
+       </A><BR>
+    <I>Tue Jan 13 10:50:37 UTC 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001529.html">[57north-discuss] New Semantic MediaWiki for 57North
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001533.html">[57north-discuss] New Semantic MediaWiki for 57North
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1531">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1531">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1531">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1531">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>If we keep discussing semantics (get it?), we'll get nowhere, so I'm pulling this
+back out to some more broad points that may be worth considering before
+we all fall out over the mailing list again.
+
+On Tue, Jan 13, 2015 at 10:10:20AM +0000, Robert McWilliam wrote:
+&gt;<i> Sorry for not getting back to this sooner. Work and drinking beer seem
+</I>&gt;<i> to have consumed all my time for the past few days.
+</I>&gt;<i> 
+</I>&gt;<i> On Thu, Jan 8, 2015, at 03:21 PM, Iain R. Learmonth wrote:
+</I>&gt;<i> &gt; On Thu, Jan 08, 2015 at 02:12:39PM +0000, Robert McWilliam wrote:
+</I>&gt;<i> &gt; &gt; What is the objection to hosting it on garioch?
+</I>&gt;<i> 
+</I>&gt;<i> Resource issues:
+</I>&gt;<i> &gt;   * Semantic MediaWiki has an RDF backend. RDF is not resource
+</I>&gt;<i> &gt;     friendly and adequate room should be allowed for the triplestore
+</I>&gt;<i> &gt;     to grow.
+</I>&gt;<i> &gt;   * The cost incurred to bring garioch up to a specification where it
+</I>&gt;<i> &gt;     would not lead to increased page load times and potential crashes
+</I>&gt;<i> &gt;     where resource limits are reached would not be insignificant.
+</I>&gt;<i> &gt;   * We have had issues when uploading high resolution images to the
+</I>&gt;<i> &gt;     wiki on garioch as not enough memory has been available to perform
+</I>&gt;<i> &gt;     image thumbnailing, so resources need to be allowed for this.
+</I>&gt;<i> 
+</I>&gt;<i> We can get more resources. EIther upgrading garioch or getting another
+</I>&gt;<i> server. Andy's link to Linode put the cost of that at $10/month for the
+</I>&gt;<i> spec you said was currently needed, possibly rising to $20/month as the
+</I>&gt;<i> wiki grows. 
+</I>&gt;<i> 
+</I>&gt;<i> I think we should pay that to keep the wiki under space control if we do
+</I>&gt;<i> decide to use semantic mediawiki.
+</I>
+I'm all for community owned resoruces with an admin team, and
+last I spoke to irl about this he agreed that was a good idea.
+ 
+&gt;<i> Security issues:
+</I>&gt;<i> &gt;   * Semantic MediaWiki is a complex PHP application and as such will,
+</I>&gt;<i> &gt;     from time to time, have remotely exploitable vulnerabilities.
+</I>&gt;<i> &gt;   * garioch currently hosts our mail and DNS systems. These, if
+</I>&gt;<i> &gt;     compromised, have far greater potential for causing reputational
+</I>&gt;<i> &gt;     harm than the wiki.
+</I>&gt;<i> &gt;   * As far as possible, we should also be keeping membership data away
+</I>&gt;<i> &gt;     from any potential security issues.
+</I>&gt;<i> 
+</I>&gt;<i> If the risk of compromise is this high I'd be more inclined towards not
+</I>&gt;<i> using it.
+</I>
+Judging by last night's doorbot fun, we've got bigger security issues
+than whether complicated software may or may not theoretically have
+bugs. We should probably choose our battles closer to home.
+Sandboxing/separation of major services is probably a wise plan though. 
+
+&gt;<i> 
+</I>&gt;<i> &gt;   * Currently, the space enjoys me paying for hackr. I pay for it and
+</I>&gt;<i> &gt;     maintain it for the benefit of all space members.
+</I>&gt;<i> 
+</I>&gt;<i> I'm not sure what this is doing on this list? The wiki can't be moved
+</I>&gt;<i> elsewhere because you're being generous?
+</I>
+It's worth considering at this point the occasional discussions about
+the current location of hackhub/etc, how well encrypted data in transit
+is and how/who owns the box the current incarnation works on. Again,
+battle and their location relative to home. 
+
+Is it worth the space adopting hackr, or something similar, to run
+essential services on? Coming to Tony's point on democratising IT -
+maybe we could have a dedicated server that both gives our memberbase
+value and runs the vital services. Implementation is a separate
+discussion for further down the road.
+
+Personally, I think the idea behind hackr is a great - a free shell for
+all members alongside webspace and databases. It gives space members
+somewhere safe to experiment and learn about *nix based OSes, websites
+and the world of technology beyond what they've experienced. I started
+off on a similar system, silenceisdefeat.com, and that's a large part of
+what's become my digital ideology and passions. 
+
+If this was a perk of membership to the space, alongside other serives
+(xmpp? email?)  that would be a huge value add for some people and
+potentially help introduce new people to new things, or just give them
+the space to play, learn and understand some of the things that others
+are passionate about.
+
+Things and stuff, stuff and things.
+
+Have a delightful Tuesday!
+
+Hx
+
+-- 
+Blog:		<A HREF="http://beta.hibby.info/">http://beta.hibby.info</A>
+Linkedin:	<A HREF="http://www.linkedin.com/in/davehibberd">http://www.linkedin.com/in/davehibberd</A>
+Fingerprint:	5E4F 5451 93E8 969C 8A59  
+		B80A 03A1 FB7A 1904 771B
+Twitter:	@Hibbie
+Call:		MM3ZRZ
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 473 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20150113/6b5b5183/attachment.sig">http://lists.57north.co/pipermail/57north-discuss/attachments/20150113/6b5b5183/attachment.sig</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001529.html">[57north-discuss] New Semantic MediaWiki for 57North
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2015-January/001533.html">[57north-discuss] New Semantic MediaWiki for 57North
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/date.html#1531">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/thread.html#1531">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/subject.html#1531">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2015-January/author.html#1531">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2015-January/001531.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:15:55 GMT -->
+</html>

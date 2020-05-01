@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-October/003392.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:14:58 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Space rack/server
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20rack/server&In-Reply-To=%3Ce91054cb-a09d-4e1a-a745-f98c0ccbfd12%40www.fastmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-October/003388.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2019-October/003397.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Space rack/server</H1>
+    <B>Hibby</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Space%20rack/server&In-Reply-To=%3Ce91054cb-a09d-4e1a-a745-f98c0ccbfd12%40www.fastmail.com%3E"
+       TITLE="[57north-discuss] Space rack/server">d at vehibberd.com
+       </A><BR>
+    <I>Tue Oct 22 10:20:36 BST 2019</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-October/003388.html">[57north-discuss] Space rack/server
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-October/003397.html">[57north-discuss] Space rack/server
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/date.html#3392">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/thread.html#3392">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/subject.html#3392">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/author.html#3392">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+&gt;<i> Are we going to run the aircon all the time? What happens when someone
+</I>&gt;<i> switches it off?
+</I>
+The aircon won't make that much difference - 2-3C change in ambient external temperature shouldn't impact us that much. Really we need to consider our heat dissipation of the hardware mounted inside and attach appropriate cooling.
+
+It's a safe assumption that ambient will be 19-25C, and we can stick a couple of fan &amp; filter units like [1] in, controlled by a thermostat - Typically we'll recommend 40C internal temperature as the activation temperature. I *probably* know the calculation to convert BTU output to real temperature increase vs ambient, and from there we can approximate a fan's duty cycle.
+
+Alternatively, we could run it open backed and hope for the best short term?
+
+I actually think a bigger concern is power input - 1x 13A plug isn't going to be very useful in terms of current for running equipment, and I would be concerned about running from multiple 13A inputs on the same ring/spur. 
+3120VA isn't that much, and in terms of heat output is pretty low too - my server potentially draws 750W. 2-3 of them and we're stuffed! 
+
+I wonder if we can stick it in the comms room, terminate the fibre there and more... 
+
+We should also look at how this is funded - it's going to drive power use up, and I'd rather not squeeze the space out of cash accidentally. 
+If we assume that a server is running idle at 200W or so, with an average UK electricity cost of 15.5p/ kWh then we can estimate that:
+
+15.5 pence * (200W/1000W) * 24h * 365 days == £271.60 / 12 == £22.63/mo. 
+That's more than a membership to keep something alive, potentially?
+
+&gt;<i> &gt;&gt; * can we do something about the noise?
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Noise can probably be managed by distance from us if we're spreading further wide, or asking nicely if we can put it in a cupboard and playing around in the comms room. We might want to look at consolodating all the noisy/dirty equipment in one corner.
+</I>&gt;<i> 
+</I>&gt;<i> We had a split in the old space of noisy/dirty and clean/social. Both
+</I>&gt;<i> spaces ended up dirty.
+</I>&gt;<i> 
+</I>&gt;<i> If we're going to have a server rack we *need* to keep it clean. It
+</I>&gt;<i> should not get lumped in with a dirty workshop.
+</I>&gt;<i> 
+</I>&gt;<i> I guess this probably wasn't what you meant but I want to be clear on this.
+</I>
+Let's put it right beside some really dusty, dirty equipment. I see no issues with this.
+
+&gt;<i> 
+</I>&gt;<i> &gt;&gt; I think I would first want to see answers to the 4 questions above. If
+</I>&gt;<i> &gt;&gt; you just wanted to get the rack and put your server in it, fine, but if
+</I>&gt;<i> &gt;&gt; you want to also start building this out and see it more as a service
+</I>&gt;<i> &gt;&gt; for hackerspace members, that is going to need more forward planning.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Definitely needs forward planning. I don't just want to buy, beg, borrow or steal stuff and end up with hardware we don't know what to do with in 6 months time. This is part of my idea about a 21U rack - it's a bit more convenient to move and live with in a smaller location than a full height rack, but it straps us for expansion... But then, are we beginning to get into the business of offering members COLO at that point?
+</I>&gt;<i> 
+</I>&gt;<i> I think this is not a terrible idea, and would be useful to members. I
+</I>&gt;<i> would invest time in getting a decent network set up to support members
+</I>&gt;<i> colo.
+</I>
+Yeah, I think it could be a fun challenge. I wonder how happy our internet sponsor would be with us offering this service on their lines? 
+
+Alternatively, I wonder if we could ask IFB or someone for some physical space and do *actual* colo at their location? Cheeky, but it could be worth it...
+
+[1] <A HREF="https://www.rittal.com/com-en/content/media/embilder/7webspecials/filterlfter/toptherm_filterluefter_gb.pdf">https://www.rittal.com/com-en/content/media/embilder/7webspecials/filterlfter/toptherm_filterluefter_gb.pdf</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-October/003388.html">[57north-discuss] Space rack/server
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2019-October/003397.html">[57north-discuss] Space rack/server
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/date.html#3392">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/thread.html#3392">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/subject.html#3392">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2019-October/author.html#3392">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2019-October/003392.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2020 18:14:58 GMT -->
+</html>
