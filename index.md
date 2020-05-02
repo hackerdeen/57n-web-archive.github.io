@@ -5,8 +5,8 @@
 This is a static file set in github, accessed via github pages.  There are a few things here, we may add more over time.  Each archived system lived in a sub-directory of this.
 
 This can be used as a static file store for systems that are achived, or anything reasonably static like that. 
-* It can be viewed at https://hackerdeen.github.io/57n-web-archive.github.io(https://hackerdeen.github.io/57n-web-archive.github.io)
-* It can be edited at https://github.com/hackerdeen/57n-web-archive.github.io(https://github.com/hackerdeen/57n-web-archive.github.io)
+* It can be viewed at [https://hackerdeen.github.io/57n-web-archive.github.io](https://hackerdeen.github.io/57n-web-archive.github.io)
+* It can be edited at [https://github.com/hackerdeen/57n-web-archive.github.io](https://github.com/hackerdeen/57n-web-archive.github.io)
 
 
 ## Mailing List Archive [view>](https://hackerdeen.github.io/57n-web-archive.github.io/mailing_list/)
