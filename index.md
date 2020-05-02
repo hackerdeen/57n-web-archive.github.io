@@ -1,10 +1,12 @@
 # Welcome to the 57North Archive
 
+![57North Logo](https://hackerdeen.github.io/57n-web-archive.github.io/mediawiki/images/thumb/3/3d/57_North_WLL.svg/286px-57_North_WLL.svg.png)
+
 This is a static file set in github, accessed via github pages.  There are a few things here, we may add more over time.  Each archived system lived in a sub-directory of this.
 
 This can be used as a static file store for systems that are achived, or anything reasonably static like that. 
-* It can be viewed at https://hackerdeen.github.io/57n-web-archive.github.io
-* It can be edited at https://github.com/hackerdeen/57n-web-archive.github.io
+* It can be viewed at https://hackerdeen.github.io/57n-web-archive.github.io(https://hackerdeen.github.io/57n-web-archive.github.io)
+* It can be edited at https://github.com/hackerdeen/57n-web-archive.github.io(https://github.com/hackerdeen/57n-web-archive.github.io)
 
 
 ## Mailing List Archive [view>](https://hackerdeen.github.io/57n-web-archive.github.io/mailing_list/)
@@ -14,7 +16,7 @@ There is a mailing list archive. All mailing lists are archived here, this is no
 
 ## Wiki, pre may 2020 [view>](https://hackerdeen.github.io/57n-web-archive.github.io/mediawiki/index.php/Main_Page.html)
 
-There is a static copy of the Media Wiki based wiki. See [mediawiki](https://hackerdeen.github.io/57n-web-archive.github.io/mediawiki/index.php/Main_Page.html).  The MediaWiki based Wiki was replaced with DocuWiki in May 2020.
+There is a static copy of the Media Wiki based wiki. See [https://hackerdeen.github.io/57n-web-archive.github.io/mediawiki/index.php/Main_Page.html](https://hackerdeen.github.io/57n-web-archive.github.io/mediawiki/index.php/Main_Page.html).  The MediaWiki based Wiki was replaced with DocuWiki in May 2020.
 
 Things that don't work in the static version...
 * Login
