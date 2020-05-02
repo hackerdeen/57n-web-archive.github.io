@@ -5,9 +5,10 @@ This is a static file set in github server via github pages.  There are a few th
 
 ## Mailing List Archive 
 
-There is a mailing list archive. See https://andygaskell.github.io/57n-web-archive.github.io/mailing_list/
+There is a mailing list archive. See [mailing_list](https://andygaskell.github.io/57n-web-archive.github.io/mailing_list/)
+
 
 
 ## Wiki, pre may 2020
 
-There is a static copy of the Media Wiki based wiki. See https://andygaskell.github.io/57n-web-archive.github.io/mediawiki/ 
+There is a static copy of the Media Wiki based wiki. See [mediawiki](https://andygaskell.github.io/57n-web-archive.github.io/mediawiki/)
