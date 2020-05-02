@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF[
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+	<!ENTITY swivt 'http://semantic-mediawiki.org/swivt/1.0#'>
+	<!ENTITY wiki 'http://wiki.57north.org.uk/57n_wiki//index.php/Special:URIResolver/'>
+	<!ENTITY category 'http://wiki.57north.org.uk/57n_wiki//index.php/Special:URIResolver/Category-3A'>
+	<!ENTITY property 'http://wiki.57north.org.uk/57n_wiki//index.php/Special:URIResolver/Property-3A'>
+	<!ENTITY wikiurl 'http://localhost/57n_wiki/57n_wiki//index.php/'>
+]>
+
+<rdf:RDF
+	xmlns:rdf="&rdf;"
+	xmlns:rdfs="&rdfs;"
+	xmlns:owl ="&owl;"
+	xmlns:swivt="&swivt;"
+	xmlns:wiki="&wiki;"
+	xmlns:category="&category;"
+	xmlns:property="&property;">
+
+	<owl:Ontology rdf:about="http://localhost/57n_wiki/57n_wiki//index.php/Special:ExportRDF/File-3A108_Crown_St_inside_01.jpg">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-02T04:06:55+01:00</swivt:creationDate>
+		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
+	</owl:Ontology>
+	<swivt:Subject rdf:about="http://wiki.57north.org.uk/57n_wiki//index.php/Special:URIResolver/File-3A108_Crown_St_inside_01.jpg">
+		<rdfs:label>File:108 Crown St inside 01.jpg</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://localhost/57n_wiki/57n_wiki//index.php/Special:ExportRDF/File-3A108_Crown_St_inside_01.jpg"/>
+		<swivt:page rdf:resource="http://localhost/57n_wiki/57n_wiki//index.php/File-3A108_Crown_St_inside_01.jpg"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:file rdf:resource="http://localhost/57n_wiki/57n_wiki//images/b/bd/108_Crown_St_inside_01.jpg"/>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-30T17:03:12Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458757.2105556</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">108 Crown St inside 01.jpg</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
+	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiNamespace" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
+	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#file" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
+	<owl:DatatypeProperty rdf:about="http://wiki.57north.org.uk/57n_wiki//index.php/Special:URIResolver/Property-3AModification_date-23aux" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
+	<!-- Created by Semantic MediaWiki, https://www.semantic-mediawiki.org/ -->
+</rdf:RDF>

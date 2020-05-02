@@ -10,7 +10,7 @@ There is a mailing list archive. See [mailing_list](https://andygaskell.github.i
 
 ## Wiki, pre may 2020
 
-There is a static copy of the Media Wiki based wiki. See [mediawiki](https://andygaskell.github.io/57n-web-archive.github.io/mediawiki/).  The MediaWiki based Wiki was replaced with DocuWiki.
+There is a static copy of the Media Wiki based wiki. See [mediawiki](https://andygaskell.github.io/57n-web-archive.github.io/mediawiki/index.php/Main_Page.html).  The MediaWiki based Wiki was replaced with DocuWiki.
 
 Things that don't work in the static version...
 * Login
