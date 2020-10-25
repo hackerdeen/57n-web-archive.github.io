@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2020-May/003553.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 18:56:38 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Weather in my garden
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Weather%20in%20my%20garden&In-Reply-To=%3C2774a4b1-060e-2013-4782-ec5d4990d7ac%40fsfe.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003552.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003554.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Weather in my garden</H1>
+    <B>Iain R. Learmonth</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Weather%20in%20my%20garden&In-Reply-To=%3C2774a4b1-060e-2013-4782-ec5d4990d7ac%40fsfe.org%3E"
+       TITLE="[57north-discuss] Weather in my garden">irl at fsfe.org
+       </A><BR>
+    <I>Sat May 16 14:28:59 BST 2020</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003552.html">[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003554.html">[57north-discuss] [REMOTE] Mumblin' Night - 19th May 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/date.html#3553">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/thread.html#3553">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/subject.html#3553">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/author.html#3553">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi All,
+
+Do you have an RTL-SDR around that you want to use for something? Would
+you be excited to know what the weather in my garden is like?
+
+Every 30 minutes I am now transmitting a data packet on 144.800MHz using
+1200 baud AFSK. You can likely receive this across most of Aberdeen
+thanks to the repeater station at the University.
+
+If you want to give it a go, on a Debian system:
+
+sudo apt install rtl-sdr direwolf
+rtl_fm -f 144.8M -o 4 - | direwolf -n 1 -r 24000 -b 16 -
+
+Then wait. You should hopefully see some packets decode in your terminal
+after some time. There is at least one every 10 minutes. After not long,
+you should then learn the temperature and humidity in my garden!
+
+If you give it a try, let me know how you get on.
+
+Thanks,
+Iain.
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003552.html">[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003554.html">[57north-discuss] [REMOTE] Mumblin' Night - 19th May 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/date.html#3553">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/thread.html#3553">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/subject.html#3553">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/author.html#3553">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2020-May/003553.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 18:56:38 GMT -->
+</html>
