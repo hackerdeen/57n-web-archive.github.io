@@ -26,7 +26,12 @@ Things that don't work in the static version...
 
 ## Method
 
-* The files are typically archived via [HTTrack](https://www.httrack.com/).
+* The files are typically archived via [HTTrack](https://www.httrack.com/).  
 * The files are added to this GitHub repo.
 * It is all automagically published via [Github pages](https://pages.github.com/).
 * Sometimes it takes a couple of minutes between when a change goes into git and when it displays or updates in github pages.
+
+
+## HTTrack Examples
+
+'httrack https://lists.57north.co/listinfo/57north-announce https://lists.57north.co/pipermail/57north-announce/ https://lists.57north.co/listinfo/57north-ctte https://lists.57north.co/pipermail/57north-ctte/ https://lists.57north.co/listinfo/57north-discuss https://lists.57north.co/pipermail/57north-discuss/ https://lists.57north.co/listinfo/57north-music https://lists.57north.co/pipermail/57north-music/ https://lists.57north.co/listinfo  -O "/home/andy/temp/57n/httrack/archive3"  -%v'

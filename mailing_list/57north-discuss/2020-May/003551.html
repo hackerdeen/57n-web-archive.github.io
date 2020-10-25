@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2020-May/003551.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 18:56:38 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20ESP32%20poor%20wifi%2C%0A%20likely%20due%20shielding%20by%20a%20nearby%20ESP8266&In-Reply-To=%3C6bc2ae56-8447-696f-06e4-8eea2e14b24d%40lklyne.co.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003550.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003552.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266</H1>
+    <B>Lawrence</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20ESP32%20poor%20wifi%2C%0A%20likely%20due%20shielding%20by%20a%20nearby%20ESP8266&In-Reply-To=%3C6bc2ae56-8447-696f-06e4-8eea2e14b24d%40lklyne.co.uk%3E"
+       TITLE="[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266">57north.org.uk at lklyne.co.uk
+       </A><BR>
+    <I>Sat May 16 08:57:03 BST 2020</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003550.html">[57north-discuss] ESP32 poor wifi,	likely due shielding by a nearby ESP8266
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003552.html">[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/date.html#3551">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/thread.html#3551">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/subject.html#3551">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/author.html#3551">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Wouter
+
+PCB antennas can be very directional, in recent EMC testing of a BLE 
+2.4ghz modified F antenna I had a difference of circa 10dB as you 
+rotated the pcb around 360 degrees, with even worse above and below the 
+plane of the PCB antenna.
+
+If within any casing you have is there room to rotate the PCB, that 
+might help.
+Daft question: Not having seen the mount is it on a pole or similar that 
+can be rotated 90 degrees in the vertical plane.
+
+Does your router allow you to survey local access points (I use a 
+draytek which will do a scan of all the bands so you can see what is 
+around you and on what chaannels) with a view to chnaging the 2.4ghz 
+channel. Not fail safe as some routers will do dynamic selection - i.e. 
+at start will look at choose a channel based on current use. Also some 
+systems are better away from top and bottom channels.
+
+Lawrence
+
+On 16/05/2020 08:33, Wouter Piessens wrote:
+&gt;<i> Good morning folks,
+</I>&gt;<i>
+</I>&gt;<i> Yesterday I managed to move my weather station to the back of the 
+</I>&gt;<i> garden and at same time install Kevin's air quality sensor on the same 
+</I>&gt;<i> mount. Unfortunately, due to the design of the mount, the ESP32 in the 
+</I>&gt;<i> weather station is shielded in the direction of the router by the 
+</I>&gt;<i> ESP8266 in the air quality box.  Hence, the router is only seeing the 
+</I>&gt;<i> air quality ESP8266.
+</I>&gt;<i>
+</I>&gt;<i> Unless there are no other options, I will not rebuild the mount.  I 
+</I>&gt;<i> wonder if any of you know of any tricks to boost the wifi signal 
+</I>&gt;<i> through hardware or via software (micropython) for the onboard wifi 
+</I>&gt;<i> antenna.  Moving the wifi router does not seem to help.    Except for 
+</I>&gt;<i> the ESP's, all my internet connections at home use the 5 GHz bands or 
+</I>&gt;<i> are wired.  But obviously the tens of neighbours have likely hundreds 
+</I>&gt;<i> of 2.4 GHz wifi appliances disturbing the spectrum nonetheless.
+</I>&gt;<i> Distance between ESP's and router: 20m horizontal, 2m vertical, with 
+</I>&gt;<i> only a window between them.
+</I>&gt;<i>
+</I>&gt;<i> Any ideas?
+</I>&gt;<i>
+</I>&gt;<i> Cheerio,
+</I>&gt;<i> Wouter
+</I>&gt;<i>
+</I>&gt;<i> &lt;<A HREF="https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail">https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail</A>&gt; 
+</I>&gt;<i> 	Virus-free. www.avast.com 
+</I>&gt;<i> &lt;<A HREF="https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail">https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail</A>&gt; 
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 57north-discuss mailing list
+</I>&gt;<i> <A HREF="http://lists.57north.co/listinfo/57north-discuss">57north-discuss at lists.57north.co</A>
+</I>&gt;<i> <A HREF="http://lists.57north.co/listinfo/57north-discuss">http://lists.57north.co/listinfo/57north-discuss</A>
+</I>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20200516/6bab46fc/attachment.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20200516/6bab46fc/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003550.html">[57north-discuss] ESP32 poor wifi,	likely due shielding by a nearby ESP8266
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003552.html">[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/date.html#3551">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/thread.html#3551">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/subject.html#3551">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/author.html#3551">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2020-May/003551.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 18:56:38 GMT -->
+</html>

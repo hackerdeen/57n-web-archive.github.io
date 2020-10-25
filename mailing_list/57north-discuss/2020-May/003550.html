@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2020-May/003550.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 18:56:38 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] ESP32 poor wifi,	likely due shielding by a nearby ESP8266
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20ESP32%20poor%20wifi%2C%0A%09likely%20due%20shielding%20by%20a%20nearby%20ESP8266&In-Reply-To=%3CCAAvg8ktSygh7g2Bf7mVqVin6C5oZQxuVfyM3i273vHdn25bcJQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003549.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003551.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] ESP32 poor wifi,	likely due shielding by a nearby ESP8266</H1>
+    <B>Wouter Piessens</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20ESP32%20poor%20wifi%2C%0A%09likely%20due%20shielding%20by%20a%20nearby%20ESP8266&In-Reply-To=%3CCAAvg8ktSygh7g2Bf7mVqVin6C5oZQxuVfyM3i273vHdn25bcJQ%40mail.gmail.com%3E"
+       TITLE="[57north-discuss] ESP32 poor wifi,	likely due shielding by a nearby ESP8266">wouter.piessens at gmail.com
+       </A><BR>
+    <I>Sat May 16 08:33:29 BST 2020</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003549.html">[57north-discuss] [REMOTE] Friday night chat
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003551.html">[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/date.html#3550">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/thread.html#3550">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/subject.html#3550">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/author.html#3550">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Good morning folks,
+
+Yesterday I managed to move my weather station to the back of the garden
+and at same time install Kevin's air quality sensor on the same mount.
+Unfortunately, due to the design of the mount, the ESP32 in the weather
+station is shielded in the direction of the router by the ESP8266 in the
+air quality box.  Hence, the router is only seeing the air quality ESP8266.
+
+Unless there are no other options, I will not rebuild the mount.  I wonder
+if any of you know of any tricks to boost the wifi signal through hardware
+or via software (micropython) for the onboard wifi antenna.  Moving the
+wifi router does not seem to help.    Except for the ESP's, all my internet
+connections at home use the 5 GHz bands or are wired.  But obviously the
+tens of neighbours have likely hundreds of 2.4 GHz wifi appliances
+disturbing the spectrum nonetheless.
+Distance between ESP's and router: 20m horizontal, 2m vertical, with only a
+window between them.
+
+Any ideas?
+
+Cheerio,
+Wouter
+
+&lt;<A HREF="https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail">https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail</A>&gt;
+Virus-free.
+www.avast.com
+&lt;<A HREF="https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail">https://www.avast.com/sig-email?utm_medium=email&amp;utm_source=link&amp;utm_campaign=sig-email&amp;utm_content=webmail</A>&gt;
+&lt;#DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2&gt;
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20200516/3a4511a9/attachment.html">http://lists.57north.co/pipermail/57north-discuss/attachments/20200516/3a4511a9/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003549.html">[57north-discuss] [REMOTE] Friday night chat
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2020-May/003551.html">[57north-discuss] ESP32 poor wifi, likely due shielding by a nearby ESP8266
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/date.html#3550">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/thread.html#3550">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/subject.html#3550">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2020-May/author.html#3550">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2020-May/003550.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 18:56:38 GMT -->
+</html>
