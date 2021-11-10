@@ -9,9 +9,13 @@ This can be used as a static file store for systems that are achived, or anythin
 * It can be edited at [https://github.com/hackerdeen/57n-web-archive.github.io](https://github.com/hackerdeen/57n-web-archive.github.io)
 
 
-## Mailing List Archive [view>](https://hackerdeen.github.io/57n-web-archive.github.io/mailing_list/)
+## Mailing List (2014-2021) Archive [view>](https://hackerdeen.github.io/57n-web-archive.github.io/mailing_list/)
 
-There is a mailing list archive. All mailing lists are archived here, this is not an automated process, but a system for perhaps keeping old mailing list data when migrating to a new server, or that sort of thing.  The archive date is noted on the [index page](https://hackerdeen.github.io/57n-web-archive.github.io/mailing_list/).
+There is a mailing list archive for the mailing list from March 2014 to November 2021. All mailing lists are archived here, this is not an automated process, but a system for perhaps keeping old mailing list data when migrating to a new server, or that sort of thing.  The archive date is noted on the [index page](https://hackerdeen.github.io/57n-web-archive.github.io/mailing_list/).
+
+From November 2021 a new mailing list was set-up, it's not achived yet.
+* Sign-up: https://lists.57north.org.uk/mailman3/postorius/lists/
+* Read: https://lists.57north.org.uk/mailman3/hyperkitty/
 
 
 ## Wiki, pre may 2020 [view>](https://hackerdeen.github.io/57n-web-archive.github.io/mediawiki/index.php/Main_Page.html)
