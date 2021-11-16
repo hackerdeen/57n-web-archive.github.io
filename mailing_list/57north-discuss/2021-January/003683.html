@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2021-January/003683.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 10:44:35 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Bricked Startech IP-KVM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bricked%20Startech%20IP-KVM&In-Reply-To=%3C0f5d595b-20ef-c26e-b333-46ebd23fec19%40minke-informatics.co.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003682.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003684.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Bricked Startech IP-KVM</H1>
+    <B>Tony Travis</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bricked%20Startech%20IP-KVM&In-Reply-To=%3C0f5d595b-20ef-c26e-b333-46ebd23fec19%40minke-informatics.co.uk%3E"
+       TITLE="[57north-discuss] Bricked Startech IP-KVM">tony.travis at minke-informatics.co.uk
+       </A><BR>
+    <I>Tue Jan 19 11:24:14 GMT 2021</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003682.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003684.html">[57north-discuss] Tuesday Mumble
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/date.html#3683">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/thread.html#3683">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/subject.html#3683">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/author.html#3683">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 19/01/2021 08:55, Lawrence wrote:
+&gt;<i> Tony
+</I>&gt;<i> 
+</I>&gt;<i> As U-boot tends to be built for the board and is very flexible it is 
+</I>&gt;<i> possible to build it with a zero timeout on the boot prompt so it 
+</I>&gt;<i> becomes impossible to enter interactive mode.
+</I>
+Hi, Lawrence.
+
+Can't help thinking they did that on purpose :-(
+
+&gt;<i> When you have it open also look for a JTAG connector, typically a 2*5 or 
+</I>&gt;<i> 2*10 pin header as this will be another possible route into accessing 
+</I>&gt;<i> the flash. (Looks as if maybe a 16 pin connector 
+</I>&gt;<i> <A HREF="https://www.etoolsmiths.com/jtag-pinouts-and-connectors-for-powerpc/">https://www.etoolsmiths.com/jtag-pinouts-and-connectors-for-powerpc/</A>)
+</I>
+OK + thx for that link.
+
+&gt;<i> U-Boot probably has it's own partitions in the flash, commonly a 
+</I>&gt;<i> partition for uboot and a partition for uboot confirguration. But also 
+</I>&gt;<i> has default configuration built in so just erasing uboot config may not 
+</I>&gt;<i> help.
+</I>
+I've attached the boot logs from my 'bricked' SV841DUSBI IP-KVM and a 
+working SV841DUSBI IP-KVM, which seems to have idenical firmware, and a 
+diff of the boot logs, showing where the SV841DUSBI IP-KVM goes wrong.
+
+&gt;<i> If in touch with startech them ask them whether it has a JTAG port or 
+</I>&gt;<i> what do they use for factory programming. I have a variety of 
+</I>&gt;<i> programming hardware.
+</I>
+My Startech support contact has not relied since I told him I bought the 
+IP-KVM off eBay, despite Startech's widely advertised lifetime support.
+
+&gt;<i> Looking at the boot log the kernel looks OK and it is possibly the root 
+</I>&gt;<i> filesystem that is the problem.
+</I>
+Yes, I think you're right about that.
+
+Thanks for your helpful suggestions,
+
+   Tony.
+
+-- 
+Minke Informatics Limited, Registered in Scotland - Company No. SC419028
+Registered Office: 3 Donview, Bridge of Alford, AB33 8QJ, Scotland (UK)
+tel. +44(0)19755 63548                    <A HREF="http://minke-informatics.co.uk/">http://minke-informatics.co.uk</A>
+mob. +44(0)7985 078324        mailto:<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony.travis at minke-informatics.co.uk</A>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: SV841DUSBI.log
+Type: text/x-log
+Size: 3893 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20210119/0f757928/attachment-0003.bin">http://lists.57north.co/pipermail/57north-discuss/attachments/20210119/0f757928/attachment-0003.bin</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: SV441DUSBI.log
+Type: text/x-log
+Size: 5465 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20210119/0f757928/attachment-0004.bin">http://lists.57north.co/pipermail/57north-discuss/attachments/20210119/0f757928/attachment-0004.bin</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: SV841DUSBI-SV441DUSBI.diff
+Type: text/x-patch
+Size: 3069 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.57north.co/pipermail/57north-discuss/attachments/20210119/0f757928/attachment-0005.bin">http://lists.57north.co/pipermail/57north-discuss/attachments/20210119/0f757928/attachment-0005.bin</A>&gt;
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003682.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003684.html">[57north-discuss] Tuesday Mumble
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/date.html#3683">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/thread.html#3683">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/subject.html#3683">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/author.html#3683">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2021-January/003683.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 10:44:35 GMT -->
+</html>

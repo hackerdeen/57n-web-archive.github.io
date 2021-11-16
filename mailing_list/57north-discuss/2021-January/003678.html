@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2021-January/003678.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 10:44:35 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Bricked Startech IP-KVM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bricked%20Startech%20IP-KVM&In-Reply-To=%3C1912986f-b790-4a75-6de7-0838a0a44717%40minke-informatics.co.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003696.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003679.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Bricked Startech IP-KVM</H1>
+    <B>Tony Travis</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bricked%20Startech%20IP-KVM&In-Reply-To=%3C1912986f-b790-4a75-6de7-0838a0a44717%40minke-informatics.co.uk%3E"
+       TITLE="[57north-discuss] Bricked Startech IP-KVM">tony.travis at minke-informatics.co.uk
+       </A><BR>
+    <I>Mon Jan 18 21:05:41 GMT 2021</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003696.html">[57north-discuss] Hackerspace virtual activities
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003679.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/date.html#3678">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/thread.html#3678">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/subject.html#3678">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/author.html#3678">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+As you know, I accidentally 'bricked' my Startech SV841DUSBI IP-KVM 
+attempting to upgrade the firmware using the built-in Web GUI and 
+despite the best efforts of Startech product support they can't help me 
+to reload the firmware, which means my IP-KVM is now 'bricked' :-(
+
+However, I connected an RS232 null-modem to the DTE serial port of the 
+IP-KVM to see if the Startech Linux controller outputs any diagnostic 
+information - It does, and and I captured the Linux kernel boot log 
+attached below.
+
+Unfortunately, Linux does not boot successfully because the image is 
+corrupted...
+
+Does anybody know if the version of U-Boot installed on this board can 
+be used to reload the Linux firmware image over the serial port?
+
+I've not found a way of interrupting the boot to get interactive control 
+of U-Boot. Normally, you just press a key within the first few seconds, 
+but that doesn't seem to work on the board in my bricked IP-KVM...
+
+Thanks,
+
+   Tony.
+
+U-Boot and Linux kernel output captured from SV841DUSBI RS232 DTE:
+
+U-Boot 1.1.1 (Jan 11 2007 - 10:36:35)
+
+CPU:   IBM PowerPC 405EP Rev. B at 200 MHz (PLB=100, OPB=50, EBC=50 MHz)
+        IIC Boot EEPROM disabled
+        PCI async ext clock used, internal PCI arbiter enabled
+        16 kB I-Cache 16 kB D-Cache
+DRAM:  32 MB
+FLASH:  8 MB
+MAC Address: 00:0e:c5:01:29:9e
+Load FPGA: 212392 bytes: Ok
+## Booting image at 10000000 ...
+    Image Name:   Linux-2.4.25
+    Image Type:   PowerPC Linux Kernel Image (gzip compressed)
+    Data Size:    773504 Bytes = 755.4 kB
+    Load Address: 00000000
+    Entry Point:  00000000
+    Verifying Checksum ... OK
+    Uncompressing Kernel Image ... OK
+Linux version 2.4.25 (<A HREF="http://lists.57north.co/listinfo/57north-discuss">x at x</A>) (gcc version 2.95.3 20010315 (release)) #1038 
+Fri Apr 18 14:27:17 EDT 2008
+IBM Walnut port (C) 2000-2002 MontaVista Software, Inc. (<A HREF="http://lists.57north.co/listinfo/57north-discuss">source at mvista.com</A>)
+Board customizations (C) 2002-6 Peter D. Gray.
+On node 0 totalpages: 8192
+zone(0): 8192 pages.
+zone(1): 0 pages.
+zone(2): 0 pages.
+Kernel command line: root=/dev/mtdblock4 
+mtdparts=phys:1m(kern),128k(fpga),64k(unique),1m(user),5824k(cramfs),128k(boot) 
+TYPE=J console=ttyS0,115200
+Calibrating delay loop (skipped)... 199.88 BogoMIPS
+Memory: 30400k available (1412k kernel code, 464k data, 84k init, 0k 
+highmem)
+Dentry cache hash table entries: 4096 (order: 3, 32768 bytes)
+Inode cache hash table entries: 2048 (order: 2, 16384 bytes)
+Mount cache hash table entries: 512 (order: 0, 4096 bytes)
+Buffer cache hash table entries: 1024 (order: 0, 4096 bytes)
+Page-cache hash table entries: 8192 (order: 3, 32768 bytes)
+POSIX conformance testing by UNIFIX
+PCI: Probing PCI hardware
+Linux NET4.0 for Linux 2.4
+Based upon Swansea University Computer Society NET3.039
+Initializing RT netlink socket
+Starting kswapd
+devfs: v1.12c (20020818) Richard Gooch (<A HREF="http://lists.57north.co/listinfo/57north-discuss">rgooch at atnf.csiro.au</A>)
+devfs: boot_options: 0x1
+i2c-core.o: i2c core module version 2.6.1 (20010830)
+i2c-dev.o: i2c /dev entries driver module version 2.6.1 (20010830)
+i2c-proc.o version 2.6.1 (20010830)
+pty: 256 Unix98 ptys configured
+Serial driver version 5.05c (2001-07-08) with MANY_PORTS SHARE_IRQ 
+SERIAL_PCI enabled
+ttyS00 at 0xef600300 (irq = 0) is a 16550A
+ttyS01 at 0xef600400 (irq = 1) is a 16550A
+IBM gpio driver version 07.25.02
+GPIO #0 at 0xc300d700
+RAMDISK driver initialized: 16 RAM disks of 4096K size 1024 blocksize
+loop: loaded (max 8 devices)
+emac: IBM OCP EMAC Ethernet driver, version 2.1
+Maintained by Benjamin Herrenschmidt &lt;<A HREF="http://lists.57north.co/listinfo/57north-discuss">benh at kernel.crashing.org</A>&gt;
+mal0: Initialized, 4 tx channels, 2 rx channels
+eth0: IBM emac, MAC 00:0e:c5:01:29:9e
+eth0: Found Generic MII PHY (0x01)
+emac1: Can't find PHY.
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+physmap flash device: 800000 at 10000000
+phys: Found 1 x16 devices at 0x0 in 16-bit bank
+  Amd/Fujitsu Extended Query Table at 0x0040
+phys: CFI does not contain boot bank location. Assuming top.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+6 cmdlinepart partitions found on MTD device phys
+Creating 6 MTD partitions on &quot;phys&quot;:
+0x00000000-0x00100000 : &quot;kern&quot;
+0x00100000-0x00120000 : &quot;fpga&quot;
+0x00120000-0x00130000 : &quot;unique&quot;
+0x00130000-0x00230000 : &quot;user&quot;
+0x00230000-0x007e0000 : &quot;cramfs&quot;
+0x007e0000-0x00800000 : &quot;boot&quot;
+IBM IIC driver v2.0
+ibm-iic0: using standard (100 kHz) mode
+NET4: Linux TCP/IP 1.0 for NET4.0
+IP Protocols: ICMP, UDP, TCP
+IP: routing cache hash table of 512 buckets, 4Kbytes
+TCP: Hash tables configured (established 2048 bind 2048)
+ip_conntrack version 2.1 (256 buckets, 2048 max) - 292 bytes per conntrack
+ip_tables: (C) 2000-2002 Netfilter core team
+arp_tables: (C) 2002 David S. Miller
+NET4: Unix domain sockets 1.0/SMP for Linux NET4.0.
+NET4: Ethernet Bridge 008 for NET4.0
+VFS: Mounted root (cramfs filesystem) readonly.
+Mounted devfs on /dev
+Freeing unused kernel memory: 84k init
+Error -3 while decompressing!
+c01cb9c0(-3962669)-&gt;c03f4000(4096)
+
+-- 
+Minke Informatics Limited, Registered in Scotland - Company No. SC419028
+Registered Office: 3 Donview, Bridge of Alford, AB33 8QJ, Scotland (UK)
+tel. +44(0)19755 63548                    <A HREF="http://minke-informatics.co.uk/">http://minke-informatics.co.uk</A>
+mob. +44(0)7985 078324        mailto:<A HREF="http://lists.57north.co/listinfo/57north-discuss">tony.travis at minke-informatics.co.uk</A>
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003696.html">[57north-discuss] Hackerspace virtual activities
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003679.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/date.html#3678">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/thread.html#3678">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/subject.html#3678">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/author.html#3678">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2021-January/003678.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 10:44:35 GMT -->
+</html>

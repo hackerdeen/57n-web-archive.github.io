@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ 
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2021-January/003679.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 10:44:35 GMT -->
+<HEAD>
+   <TITLE> [57north-discuss] Bricked Startech IP-KVM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bricked%20Startech%20IP-KVM&In-Reply-To=%3C20210118221540.GA63121%40tom-desk.erg.abdn.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003678.html">
+   <LINK REL="Next"  HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003680.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[57north-discuss] Bricked Startech IP-KVM</H1>
+    <B>Tom Jones</B> 
+    <A HREF="mailto:57north-discuss%40lists.57north.co?Subject=Re%3A%20%5B57north-discuss%5D%20Bricked%20Startech%20IP-KVM&In-Reply-To=%3C20210118221540.GA63121%40tom-desk.erg.abdn.ac.uk%3E"
+       TITLE="[57north-discuss] Bricked Startech IP-KVM">tj at enoti.me
+       </A><BR>
+    <I>Mon Jan 18 22:15:40 GMT 2021</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003678.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+        <LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003680.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/date.html#3679">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/thread.html#3679">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/subject.html#3679">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/author.html#3679">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Mon, Jan 18, 2021 at 09:05:41PM +0000, Tony Travis wrote:
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> As you know, I accidentally 'bricked' my Startech SV841DUSBI IP-KVM 
+</I>&gt;<i> attempting to upgrade the firmware using the built-in Web GUI and 
+</I>&gt;<i> despite the best efforts of Startech product support they can't help me 
+</I>&gt;<i> to reload the firmware, which means my IP-KVM is now 'bricked' :-(
+</I>&gt;<i> 
+</I>&gt;<i> However, I connected an RS232 null-modem to the DTE serial port of the 
+</I>&gt;<i> IP-KVM to see if the Startech Linux controller outputs any diagnostic 
+</I>&gt;<i> information - It does, and and I captured the Linux kernel boot log 
+</I>&gt;<i> attached below.
+</I>&gt;<i> 
+</I>&gt;<i> Unfortunately, Linux does not boot successfully because the image is 
+</I>&gt;<i> corrupted...
+</I>&gt;<i> 
+</I>&gt;<i> Does anybody know if the version of U-Boot installed on this board can 
+</I>&gt;<i> be used to reload the Linux firmware image over the serial port?
+</I>&gt;<i> 
+</I>&gt;<i> I've not found a way of interrupting the boot to get interactive control 
+</I>&gt;<i> of U-Boot. Normally, you just press a key within the first few seconds, 
+</I>&gt;<i> but that doesn't seem to work on the board in my bricked IP-KVM...
+</I>&gt;<i> 
+</I>
+Can you break into u-boot?
+
+If you can get a u-boot prompt then you can probably dump the flash.
+&gt;<i>From u-boot, I don't see the normal 'press any key to interrupt boot'
+</I>message so you might be out of luck.
+
+If you can share internals photos and a firmware image then we might be
+able to manually flash any spi eeproms. Risky, but might be worth it.
+
+- Tom
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003678.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+	<LI>Next message: <A HREF="https://lists.57north.co/pipermail/57north-discuss/2021-January/003680.html">[57north-discuss] Bricked Startech IP-KVM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/date.html#3679">[ date ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/thread.html#3679">[ thread ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/subject.html#3679">[ subject ]</a>
+              <a href="https://lists.57north.co/pipermail/57north-discuss/2021-January/author.html#3679">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://lists.57north.co/listinfo/57north-discuss">More information about the 57north-discuss
+mailing list</a><br>
+</body>
+<!-- Mirrored from lists.57north.co/pipermail/57north-discuss/2021-January/003679.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 10:44:35 GMT -->
+</html>
